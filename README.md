@@ -1,4 +1,4 @@
-# TV-Guide
+TV-Guide
 
 # SSH command to start the TV Guide
 
