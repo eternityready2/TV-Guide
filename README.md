@@ -1,5 +1,3 @@
-TV-Guide
-
 # SSH command to start the TV Guide
 
 sudo systemctl restart tvguide
