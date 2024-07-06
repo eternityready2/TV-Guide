@@ -1,0 +1,10 @@
+# vi /etc/systemd/system/sample.service
+[Unit]
+Description=Description for sample script goes here
+After=network.target
+
+[Service]
+ExecStart=/home/manager/chg/auto-start-server.sh
+
+[Install]
+WantedBy=default.target
