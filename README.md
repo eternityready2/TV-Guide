@@ -1,11 +1,17 @@
 # SSH command to start the TV Guide
 
-sudo systemctl restart tvguide
-or.. sudo systemctl restart tv.service
+sudo systemctl restart tvguide 
+or.. sudo systemctl restart tvguide.service
+
+# SSH command to stop the TV Guide
+
+1. CD to /home/manager/chg
+2. Run command, bash stop-server.sh
 
 # SSH command to start scrappers
 
-CD to home/manager/chg, Run bash do_scrape.sh
+1. CD to home/manager/chg
+2. Run command, bash do_scrape.sh
 
 # Guide for Dev Ops to understand how code posts scrapped data 
 
