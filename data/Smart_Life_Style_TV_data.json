@@ -1,0 +1,1133 @@
+{"data" : [
+    {
+        "Sunday": [
+          {
+            "program_name": "Movie",
+            "time": "12:00 AM"
+          },
+          {
+            "program_name": "Rise Up",
+            "time": "2:00 AM"
+          },
+          {
+            "program_name": "12 Weeks to Wellness",
+            "time": "2:30 AM"
+          },
+          {
+            "program_name": "Intersections",
+            "time": "4:00 AM"
+          },
+          {
+            "program_name": "A New Day",
+            "time": "4:30 AM"
+          },
+          {
+            "program_name": "LifeStart",
+            "time": "5:00 AM"
+          },
+          {
+            "program_name": "Rise Up",
+            "time": "5:30 AM"
+          },
+          {
+            "program_name": "Hot Health",
+            "time": "6:00 AM"
+          },
+          {
+            "program_name": "Journey of Hope",
+            "time": "6:30 AM"
+          },
+          {
+            "program_name": "McDougall MD",
+            "time": "7:00 AM"
+          },
+          {
+            "program_name": "Chat N' Chew",
+            "time": "7:30 AM"
+          },
+          {
+            "program_name": "Healing Hope",
+            "time": "8:00 AM"
+          },
+          {
+            "program_name": "Straight Talk",
+            "time": "8:30 AM"
+          },
+          {
+            "program_name": "Heart of Health",
+            "time": "9:00 AM"
+          },
+          {
+            "program_name": "This Life",
+            "time": "9:30 AM"
+          },
+          {
+            "program_name": "dLife",
+            "time": "10:00 AM"
+          },
+          {
+            "program_name": "The Whole Message",
+            "time": "10:30 AM"
+          },
+          {
+            "program_name": "Rise Up",
+            "time": "11:30 AM"
+          },
+          {
+            "program_name": "Help! I'm a Parent",
+            "time": "12:00 PM"
+          },
+          {
+            "program_name": "Lifestyle & Prev Care",
+            "time": "12:30 PM"
+          },
+          {
+            "program_name": "Concept",
+            "time": "1:00 PM"
+          },
+          {
+            "program_name": "Colorful Cooking",
+            "time": "1:30 PM"
+          },
+          {
+            "program_name": "Lifestyle Magazine",
+            "time": "2:00 PM"
+          },
+          {
+            "program_name": "12 Weeks to Wellness",
+            "time": "2:30 PM"
+          },
+          {
+            "program_name": "Intersections",
+            "time": "4:00 PM"
+          },
+          {
+            "program_name": "Movie",
+            "time": "4:30 PM"
+          },
+          {
+            "program_name": "Hot Health",
+            "time": "6:30 PM"
+          },
+          {
+            "program_name": "Journey of Hope",
+            "time": "7:00 PM"
+          },
+          {
+            "program_name": "McDougall MD",
+            "time": "7:30 PM"
+          },
+          {
+            "program_name": "Chat N' Chew",
+            "time": "8:00 PM"
+          },
+          {
+            "program_name": "Healing Hope",
+            "time": "8:30 PM"
+          },
+          {
+            "program_name": "Straight Talk",
+            "time": "9:00 PM"
+          },
+          {
+            "program_name": "Heart of Health",
+            "time": "9:30 PM"
+          },
+          {
+            "program_name": "This Life",
+            "time": "10:00 PM"
+          },
+          {
+            "program_name": "dLife",
+            "time": "10:30 PM"
+          },
+          {
+            "program_name": "The Whole Message",
+            "time": "11:00 PM"
+          }
+        ]
+      },
+      {
+        "Monday": [
+          {
+            "program_name": "Movie",
+            "time": "12:00 AM"
+          },
+          {
+            "program_name": "Rise Up",
+            "time": "2:00 AM"
+          },
+          {
+            "program_name": "A New Day",
+            "time": "2:30 AM"
+          },
+          {
+            "program_name": "LifeStart",
+            "time": "3:00 AM"
+          },
+          {
+            "program_name": "Kitchen Conversations",
+            "time": "3:30 AM"
+          },
+          {
+            "program_name": "Hot Health",
+            "time": "4:00 AM"
+          },
+          {
+            "program_name": "Journey of Hope",
+            "time": "4:30 AM"
+          },
+          {
+            "program_name": "McDougall MD",
+            "time": "5:00 AM"
+          },
+          {
+            "program_name": "Rise Up",
+            "time": "5:30 AM"
+          },
+          {
+            "program_name": "Chat N' Chew",
+            "time": "6:00 AM"
+          },
+          {
+            "program_name": "Healing Hope",
+            "time": "6:30 AM"
+          },
+          {
+            "program_name": "Straight Talk",
+            "time": "7:00 AM"
+          },
+          {
+            "program_name": "Heart of Health",
+            "time": "7:30 AM"
+          },
+          {
+            "program_name": "This Life",
+            "time": "8:00 AM"
+          },
+          {
+            "program_name": "dLife",
+            "time": "8:30 AM"
+          },
+          {
+            "program_name": "The Whole Message",
+            "time": "9:00 AM"
+          },
+          {
+            "program_name": "Awesome Science",
+            "time": "10:00 AM"
+          },
+          {
+            "program_name": "Help! I'm a Parent",
+            "time": "10:30 AM"
+          },
+          {
+            "program_name": "Lifestyle & Prev Care",
+            "time": "11:00 AM"
+          },
+          {
+            "program_name": "Rise Up",
+            "time": "11:30 AM"
+          },
+          {
+            "program_name": "Colorful Cooking",
+            "time": "12:00 PM"
+          },
+          {
+            "program_name": "Lifestyle Magazine",
+            "time": "12:30 PM"
+          },
+          {
+            "program_name": "12 Weeks to Wellness",
+            "time": "1:00 PM"
+          },
+          {
+            "program_name": "Intersections",
+            "time": "2:30 PM"
+          },
+          {
+            "program_name": "A New Day",
+            "time": "3:00 PM"
+          },
+          {
+            "program_name": "LifeStart",
+            "time": "3:30 PM"
+          },
+          {
+            "program_name": "Kitchen Conversations",
+            "time": "4:00 PM"
+          },
+          {
+            "program_name": "Hot Health",
+            "time": "4:30 PM"
+          },
+          {
+            "program_name": "Journey of Hope",
+            "time": "5:00 PM"
+          },
+          {
+            "program_name": "McDougall MD",
+            "time": "5:30 PM"
+          },
+          {
+            "program_name": "Chat N' Chew",
+            "time": "6:00 PM"
+          },
+          {
+            "program_name": "Healing Hope",
+            "time": "6:30 PM"
+          },
+          {
+            "program_name": "Straight Talk",
+            "time": "7:00 PM"
+          },
+          {
+            "program_name": "Heart of Health",
+            "time": "7:30 PM"
+          },
+          {
+            "program_name": "This Life",
+            "time": "8:00 PM"
+          },
+          {
+            "program_name": "dLife",
+            "time": "8:30 PM"
+          },
+          {
+            "program_name": "The Whole Message",
+            "time": "9:00 PM"
+          },
+          {
+            "program_name": "Awesome Science",
+            "time": "10:00 PM"
+          },
+          {
+            "program_name": "Help! I'm a Parent",
+            "time": "10:30 PM"
+          },
+          {
+            "program_name": "Lifestyle & Prev Care",
+            "time": "11:00 PM"
+          },
+          {
+            "program_name": "Concept",
+            "time": "11:30 PM"
+          }
+        ]
+      },
+      {
+        "Tuesday": [
+          {
+            "program_name": "Movie",
+            "time": "12:00 AM"
+          },
+          {
+            "program_name": "Rise Up",
+            "time": "2:00 AM"
+          },
+          {
+            "program_name": "Colorful Cooking",
+            "time": "2:30 AM"
+          },
+          {
+            "program_name": "Lifestyle Magazine",
+            "time": "3:00 AM"
+          },
+          {
+            "program_name": "12 Weeks to Wellness",
+            "time": "3:30 AM"
+          },
+          {
+            "program_name": "Intersections",
+            "time": "5:00 AM"
+          },
+          {
+            "program_name": "Rise Up",
+            "time": "5:30 AM"
+          },
+          {
+            "program_name": "A New Day",
+            "time": "6:00 AM"
+          },
+          {
+            "program_name": "LifeStart",
+            "time": "6:30 AM"
+          },
+          {
+            "program_name": "Kitchen Conversations",
+            "time": "7:00 AM"
+          },
+          {
+            "program_name": "Hot Health",
+            "time": "7:30 AM"
+          },
+          {
+            "program_name": "Journey of Hope",
+            "time": "8:00 AM"
+          },
+          {
+            "program_name": "McDougall MD",
+            "time": "8:30 AM"
+          },
+          {
+            "program_name": "Chat N' Chew",
+            "time": "9:00 AM"
+          },
+          {
+            "program_name": "Healing Hope",
+            "time": "9:30 AM"
+          },
+          {
+            "program_name": "Straight Talk",
+            "time": "10:00 AM"
+          },
+          {
+            "program_name": "Heart of Health",
+            "time": "10:30 AM"
+          },
+          {
+            "program_name": "This Life",
+            "time": "11:00 AM"
+          },
+          {
+            "program_name": "Rise Up",
+            "time": "11:30 AM"
+          },
+          {
+            "program_name": "The Whole Message",
+            "time": "12:00 PM"
+          },
+          {
+            "program_name": "Awesome Science",
+            "time": "1:00 PM"
+          },
+          {
+            "program_name": "Help! I'm a Parent",
+            "time": "1:30 PM"
+          },
+          {
+            "program_name": "Lifestyle & Prev Care",
+            "time": "2:00 PM"
+          },
+          {
+            "program_name": "Concept",
+            "time": "2:30 PM"
+          },
+          {
+            "program_name": "Colorful Cooking",
+            "time": "3:00 PM"
+          },
+          {
+            "program_name": "Lifestyle Magazine",
+            "time": "3:30 PM"
+          },
+          {
+            "program_name": "12 Weeks to Wellness",
+            "time": "4:00 PM"
+          },
+          {
+            "program_name": "Intersections",
+            "time": "5:30 PM"
+          },
+          {
+            "program_name": "A New Day",
+            "time": "6:00 PM"
+          },
+          {
+            "program_name": "LifeStart",
+            "time": "6:30 PM"
+          },
+          {
+            "program_name": "Kitchen Conversations",
+            "time": "7:00 PM"
+          },
+          {
+            "program_name": "Hot Health",
+            "time": "7:30 PM"
+          },
+          {
+            "program_name": "Journey of Hope",
+            "time": "8:00 PM"
+          },
+          {
+            "program_name": "McDougall MD",
+            "time": "8:30 PM"
+          },
+          {
+            "program_name": "Chat N' Chew",
+            "time": "9:00 PM"
+          },
+          {
+            "program_name": "Healing Hope",
+            "time": "9:30 PM"
+          },
+          {
+            "program_name": "Straight Talk",
+            "time": "10:00 PM"
+          },
+          {
+            "program_name": "Heart of Health",
+            "time": "10:30 PM"
+          },
+          {
+            "program_name": "This Life",
+            "time": "11:00 PM"
+          },
+          {
+            "program_name": "dLife",
+            "time": "11:30 PM"
+          }
+        ]
+      },
+      {
+        "Wednesday": [
+          {
+            "program_name": "Movie",
+            "time": "12:00 AM"
+          },
+          {
+            "program_name": "Rise Up",
+            "time": "2:00 AM"
+          },
+          {
+            "program_name": "The Whole Message",
+            "time": "2:30 AM"
+          },
+          {
+            "program_name": "Awesome Science",
+            "time": "3:30 AM"
+          },
+          {
+            "program_name": "Help! I'm a Parent",
+            "time": "4:00 AM"
+          },
+          {
+            "program_name": "Lifestyle & Prev Care",
+            "time": "4:30 AM"
+          },
+          {
+            "program_name": "Concept",
+            "time": "5:00 AM"
+          },
+          {
+            "program_name": "Rise Up",
+            "time": "5:30 AM"
+          },
+          {
+            "program_name": "Colorful Cooking",
+            "time": "6:00 AM"
+          },
+          {
+            "program_name": "Lifestyle Magazine",
+            "time": "6:30 AM"
+          },
+          {
+            "program_name": "12 Weeks to Wellness",
+            "time": "7:00 AM"
+          },
+          {
+            "program_name": "Intersections",
+            "time": "8:30 AM"
+          },
+          {
+            "program_name": "A New Day",
+            "time": "9:00 AM"
+          },
+          {
+            "program_name": "LifeStart",
+            "time": "9:30 AM"
+          },
+          {
+            "program_name": "Kitchen Conversations",
+            "time": "10:00 AM"
+          },
+          {
+            "program_name": "Hot Health",
+            "time": "10:30 AM"
+          },
+          {
+            "program_name": "Journey of Hope",
+            "time": "11:00 AM"
+          },
+          {
+            "program_name": "Rise Up",
+            "time": "11:30 AM"
+          },
+          {
+            "program_name": "Chat N' Chew",
+            "time": "12:00 PM"
+          },
+          {
+            "program_name": "Healing Hope",
+            "time": "12:30 PM"
+          },
+          {
+            "program_name": "Straight Talk",
+            "time": "1:00 PM"
+          },
+          {
+            "program_name": "Heart of Health",
+            "time": "1:30 PM"
+          },
+          {
+            "program_name": "This Life",
+            "time": "2:00 PM"
+          },
+          {
+            "program_name": "dLife",
+            "time": "2:30 PM"
+          },
+          {
+            "program_name": "The Whole Message",
+            "time": "3:00 PM"
+          },
+          {
+            "program_name": "Awesome Science",
+            "time": "4:00 PM"
+          },
+          {
+            "program_name": "Help! I'm a Parent",
+            "time": "4:30 PM"
+          },
+          {
+            "program_name": "Lifestyle & Prev Care",
+            "time": "5:00 PM"
+          },
+          {
+            "program_name": "Concept",
+            "time": "5:30 PM"
+          },
+          {
+            "program_name": "Colorful Cooking",
+            "time": "6:00 PM"
+          },
+          {
+            "program_name": "Lifestyle Magazine",
+            "time": "6:30 PM"
+          },
+          {
+            "program_name": "12 Weeks to Wellness",
+            "time": "7:00 PM"
+          },
+          {
+            "program_name": "Intersections",
+            "time": "8:30 PM"
+          },
+          {
+            "program_name": "A New Day",
+            "time": "9:00 PM"
+          },
+          {
+            "program_name": "LifeStart",
+            "time": "9:30 PM"
+          },
+          {
+            "program_name": "Kitchen Conversations",
+            "time": "10:00 PM"
+          },
+          {
+            "program_name": "Hot Health",
+            "time": "10:30 PM"
+          },
+          {
+            "program_name": "Journey of Hope",
+            "time": "11:00 PM"
+          },
+          {
+            "program_name": "McDougall MD",
+            "time": "11:30 PM"
+          }
+        ]
+      },
+      {
+        "Thursday": [
+          {
+            "program_name": "Movie",
+            "time": "12:00 AM"
+          },
+          {
+            "program_name": "Rise Up",
+            "time": "2:00 AM"
+          },
+          {
+            "program_name": "Chat N' Chew",
+            "time": "2:30 AM"
+          },
+          {
+            "program_name": "Healing Hope",
+            "time": "3:00 AM"
+          },
+          {
+            "program_name": "Straight Talk",
+            "time": "3:30 AM"
+          },
+          {
+            "program_name": "Heart of Health",
+            "time": "4:00 AM"
+          },
+          {
+            "program_name": "This Life",
+            "time": "4:30 AM"
+          },
+          {
+            "program_name": "dLife",
+            "time": "5:00 AM"
+          },
+          {
+            "program_name": "Rise Up",
+            "time": "5:30 AM"
+          },
+          {
+            "program_name": "The Whole Message",
+            "time": "6:00 AM"
+          },
+          {
+            "program_name": "Awesome Science",
+            "time": "7:00 AM"
+          },
+          {
+            "program_name": "Help! I'm a Parent",
+            "time": "7:30 AM"
+          },
+          {
+            "program_name": "Lifestyle & Prev Care",
+            "time": "8:00 AM"
+          },
+          {
+            "program_name": "Concept",
+            "time": "8:30 AM"
+          },
+          {
+            "program_name": "Colorful Cooking",
+            "time": "9:00 AM"
+          },
+          {
+            "program_name": "Lifestyle Magazine",
+            "time": "9:30 AM"
+          },
+          {
+            "program_name": "12 Weeks to Wellness",
+            "time": "10:00 AM"
+          },
+          {
+            "program_name": "Rise Up",
+            "time": "11:30 AM"
+          },
+          {
+            "program_name": "A New Day",
+            "time": "12:00 PM"
+          },
+          {
+            "program_name": "LifeStart",
+            "time": "12:30 PM"
+          },
+          {
+            "program_name": "Kitchen Conversations",
+            "time": "1:00 PM"
+          },
+          {
+            "program_name": "Hot Health",
+            "time": "1:30 PM"
+          },
+          {
+            "program_name": "Journey of Hope",
+            "time": "2:00 PM"
+          },
+          {
+            "program_name": "McDougall MD",
+            "time": "2:30 PM"
+          },
+          {
+            "program_name": "Chat N' Chew",
+            "time": "3:00 PM"
+          },
+          {
+            "program_name": "Healing Hope",
+            "time": "3:30 PM"
+          },
+          {
+            "program_name": "Straight Talk",
+            "time": "4:00 PM"
+          },
+          {
+            "program_name": "Heart of Health",
+            "time": "4:30 PM"
+          },
+          {
+            "program_name": "This Life",
+            "time": "5:00 PM"
+          },
+          {
+            "program_name": "dLife",
+            "time": "5:30 PM"
+          },
+          {
+            "program_name": "The Whole Message",
+            "time": "6:00 PM"
+          },
+          {
+            "program_name": "Awesome Science",
+            "time": "7:00 PM"
+          },
+          {
+            "program_name": "Help! I'm a Parent",
+            "time": "7:30 PM"
+          },
+          {
+            "program_name": "Lifestyle & Prev Care",
+            "time": "8:00 PM"
+          },
+          {
+            "program_name": "Concept",
+            "time": "8:30 PM"
+          },
+          {
+            "program_name": "Colorful Cooking",
+            "time": "9:00 PM"
+          },
+          {
+            "program_name": "Lifestyle Magazine",
+            "time": "9:30 PM"
+          },
+          {
+            "program_name": "12 Weeks to Wellness",
+            "time": "10:00 PM"
+          },
+          {
+            "program_name": "Intersections",
+            "time": "11:30 PM"
+          }
+        ]
+      },
+      {
+        "Friday": [
+          {
+            "program_name": "Movie",
+            "time": "12:00 AM"
+          },
+          {
+            "program_name": "Rise Up",
+            "time": "2:00 AM"
+          },
+          {
+            "program_name": "A New Day",
+            "time": "2:30 AM"
+          },
+          {
+            "program_name": "LifeStart",
+            "time": "3:00 AM"
+          },
+          {
+            "program_name": "Kitchen Conversations",
+            "time": "3:30 AM"
+          },
+          {
+            "program_name": "Hot Health",
+            "time": "4:00 AM"
+          },
+          {
+            "program_name": "Journey of Hope",
+            "time": "4:30 AM"
+          },
+          {
+            "program_name": "McDougall MD",
+            "time": "5:00 AM"
+          },
+          {
+            "program_name": "Rise Up",
+            "time": "5:30 AM"
+          },
+          {
+            "program_name": "Chat N' Chew",
+            "time": "6:00 AM"
+          },
+          {
+            "program_name": "Healing Hope",
+            "time": "6:30 AM"
+          },
+          {
+            "program_name": "Straight Talk",
+            "time": "7:00 AM"
+          },
+          {
+            "program_name": "Heart of Health",
+            "time": "7:30 AM"
+          },
+          {
+            "program_name": "This Life",
+            "time": "8:00 AM"
+          },
+          {
+            "program_name": "dLife",
+            "time": "8:30 AM"
+          },
+          {
+            "program_name": "The Whole Message",
+            "time": "9:00 AM"
+          },
+          {
+            "program_name": "Awesome Science",
+            "time": "10:00 AM"
+          },
+          {
+            "program_name": "Help! I'm a Parent",
+            "time": "10:30 AM"
+          },
+          {
+            "program_name": "Lifestyle & Prev Care",
+            "time": "11:00 AM"
+          },
+          {
+            "program_name": "Rise Up",
+            "time": "11:30 AM"
+          },
+          {
+            "program_name": "Colorful Cooking",
+            "time": "12:00 PM"
+          },
+          {
+            "program_name": "Lifestyle Magazine",
+            "time": "12:30 PM"
+          },
+          {
+            "program_name": "12 Weeks to Wellness",
+            "time": "1:00 PM"
+          },
+          {
+            "program_name": "Intersections",
+            "time": "2:30 PM"
+          },
+          {
+            "program_name": "A New Day",
+            "time": "3:00 PM"
+          },
+          {
+            "program_name": "LifeStart",
+            "time": "3:30 PM"
+          },
+          {
+            "program_name": "Kitchen Conversations",
+            "time": "4:00 PM"
+          },
+          {
+            "program_name": "Hot Health",
+            "time": "4:30 PM"
+          },
+          {
+            "program_name": "Journey of Hope",
+            "time": "5:00 PM"
+          },
+          {
+            "program_name": "McDougall MD",
+            "time": "5:30 PM"
+          },
+          {
+            "program_name": "Chat N' Chew",
+            "time": "6:00 PM"
+          },
+          {
+            "program_name": "Healing Hope",
+            "time": "6:30 PM"
+          },
+          {
+            "program_name": "Straight Talk",
+            "time": "7:00 PM"
+          },
+          {
+            "program_name": "Heart of Health",
+            "time": "7:30 PM"
+          },
+          {
+            "program_name": "This Life",
+            "time": "8:00 PM"
+          },
+          {
+            "program_name": "dLife",
+            "time": "8:30 PM"
+          },
+          {
+            "program_name": "The Whole Message",
+            "time": "9:00 PM"
+          },
+          {
+            "program_name": "Awesome Science",
+            "time": "10:00 PM"
+          },
+          {
+            "program_name": "Help! I'm a Parent",
+            "time": "10:30 PM"
+          },
+          {
+            "program_name": "Lifestyle & Prev Care",
+            "time": "11:00 PM"
+          },
+          {
+            "program_name": "Concept",
+            "time": "11:30 PM"
+          }
+        ]
+      },
+      {
+        "Saturday": [
+          {
+            "program_name": "Movie",
+            "time": "12:00 AM"
+          },
+          {
+            "program_name": "Rise Up",
+            "time": "2:00 AM"
+          },
+          {
+            "program_name": "Colorful Cooking",
+            "time": "2:30 AM"
+          },
+          {
+            "program_name": "Lifestyle Magazine",
+            "time": "3:00 AM"
+          },
+          {
+            "program_name": "12 Weeks to Wellness",
+            "time": "3:30 AM"
+          },
+          {
+            "program_name": "Intersections",
+            "time": "5:00 AM"
+          },
+          {
+            "program_name": "Rise Up",
+            "time": "5:30 AM"
+          },
+          {
+            "program_name": "A New Day",
+            "time": "6:00 AM"
+          },
+          {
+            "program_name": "LifeStart",
+            "time": "6:30 AM"
+          },
+          {
+            "program_name": "Kitchen Conversations",
+            "time": "7:00 AM"
+          },
+          {
+            "program_name": "Hot Health",
+            "time": "7:30 AM"
+          },
+          {
+            "program_name": "Journey of Hope",
+            "time": "8:00 AM"
+          },
+          {
+            "program_name": "McDougall MD",
+            "time": "8:30 AM"
+          },
+          {
+            "program_name": "Chat N' Chew",
+            "time": "9:00 AM"
+          },
+          {
+            "program_name": "Healing Hope",
+            "time": "9:30 AM"
+          },
+          {
+            "program_name": "Straight Talk",
+            "time": "10:00 AM"
+          },
+          {
+            "program_name": "Heart of Health",
+            "time": "10:30 AM"
+          },
+          {
+            "program_name": "This Life",
+            "time": "11:00 AM"
+          },
+          {
+            "program_name": "Rise Up",
+            "time": "11:30 AM"
+          },
+          {
+            "program_name": "The Whole Message",
+            "time": "12:00 PM"
+          },
+          {
+            "program_name": "Awesome Science",
+            "time": "1:00 PM"
+          },
+          {
+            "program_name": "Help! I'm a Parent",
+            "time": "1:30 PM"
+          },
+          {
+            "program_name": "Lifestyle & Prev Care",
+            "time": "2:00 PM"
+          },
+          {
+            "program_name": "Concept",
+            "time": "2:30 PM"
+          },
+          {
+            "program_name": "Movie",
+            "time": "3:00 PM"
+          },
+          {
+            "program_name": "Intersections",
+            "time": "5:00 PM"
+          },
+          {
+            "program_name": "A New Day",
+            "time": "5:30 PM"
+          },
+          {
+            "program_name": "LifeStart",
+            "time": "6:00 PM"
+          },
+          {
+            "program_name": "Kitchen Conversations",
+            "time": "6:30 PM"
+          },
+          {
+            "program_name": "Hot Health",
+            "time": "7:00 PM"
+          },
+          {
+            "program_name": "Journey of Hope",
+            "time": "7:30 PM"
+          },
+          {
+            "program_name": "McDougall MD",
+            "time": "8:00 PM"
+          },
+          {
+            "program_name": "Chat N' Chew",
+            "time": "8:30 PM"
+          },
+          {
+            "program_name": "Healing Hope",
+            "time": "9:00 PM"
+          },
+          {
+            "program_name": "Straight Talk",
+            "time": "9:30 PM"
+          },
+          {
+            "program_name": "Heart of Health",
+            "time": "10:00 PM"
+          },
+          {
+            "program_name": "This Life",
+            "time": "10:30 PM"
+          },
+          {
+            "program_name": "dLife",
+            "time": "11:00 PM"
+          },
+          {
+            "program_name": "Drugs Close to Home",
+            "time": "11:30 PM"
+          }
+        ]
+      }
+    ]
+}                        
+      
+            
