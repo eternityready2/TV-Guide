@@ -39,7 +39,6 @@ def get_data(the_date):
             starts = timezone('EST5EDT').localize(starts).astimezone(timezone('US/Pacific'))
 
             programs.append({
-                "date": starts.strftime("%Y-%m-%d"),
                 "starts": starts.strftime("%H%M"),
                 "datetime": starts,
                 "program_name": title
@@ -53,7 +52,7 @@ def get_data(the_date):
             if programs[i]['datetime'].date() == the_date:
                 del programs[i]['datetime']
                 programs_to_return.append(programs[i])
-
+    programs_to_return.sort(key=lambda x: datetime.datetime.strptime(x['starts'], "%H%M"))
     return programs_to_return
 
 

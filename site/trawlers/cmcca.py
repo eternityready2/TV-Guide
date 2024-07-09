@@ -12,7 +12,7 @@ def get_data(the_date):
             "https://miraclechannel.ca/schedule/"
         )
         response.raise_for_status()
-    except HTTPError as http_err:
+    except:
         return []
 
     programs = []
@@ -44,14 +44,13 @@ def get_data(the_date):
                     continue
 
                 programs.append({
-                    "date": starts.strftime("%Y-%m-%d"),
                     "starts": starts.strftime("%H%M"),
                     "duration": duration,
                     "program_name": cells[index].find('a', class_='event_header').text.strip()
                 })
 
             index += 1
-
+    programs.sort(key=lambda x: datetime.datetime.strptime(x['starts'], "%H%M"))
     return programs
 
 

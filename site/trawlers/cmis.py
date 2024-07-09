@@ -1,19 +1,18 @@
 from .common import Trawler
+
 import datetime
 import requests
 import re
-import urllib.request
-from urllib.error import HTTPError
 from bs4 import BeautifulSoup
 from pytz import timezone
 
-def get_data(the_date):
+def get_data(the_date,site):
     try:
         response = requests.get(
-            "http://proweb.myersinfosys.com/nrb/day?date={}&provider=&channel=21.3&time_zone=America%2FLos_Angeles&nocache=7hmsl".format(the_date.strftime("%Y-%m-%d"))
+            "http://proweb.myersinfosys.com/{}/day?date={}&time_zone=America%2FLos_Angeles&nocache=7hmsl".format(site,the_date.strftime("%Y-%m-%d"))
         )
         response.raise_for_status()
-    except HTTPError as http_err:
+    except:
         return []
 
     programs = []
@@ -24,8 +23,6 @@ def get_data(the_date):
 
         duration   = int(int(block.find("div", attrs={'data-duration': True})['data-duration'])/60)
         title      = block.find("h3").text
-        #if block.find("h4"):
-        #    description = block.find("h4").text
 
         programs.append(
             {
@@ -38,11 +35,11 @@ def get_data(the_date):
     return programs
 
 
-class TrawlerNRBNetwork(Trawler):
+class TrawlerMyersInfoSys(Trawler):
     @staticmethod
-    def get_info_for_days(days):
+    def get_info_for_days(days, site):
         schedule = {}
         for day in days:
-            schedule.update({day.strftime("%Y-%m-%d"): get_data(day)})
+            schedule.update({day.strftime("%Y-%m-%d"): get_data(day, site)})
 
         return schedule

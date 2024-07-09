@@ -1,39 +1,48 @@
 from .common import Trawler
-
 import datetime
 import requests
 from bs4 import BeautifulSoup
 from pytz import timezone
 
 def get_data(the_date):
-
     try:
-        response = requests.get("https://cycnow.com/weekly-schedule/")
+        response = requests.post(
+            "https://www.govictory.com/wp-admin/admin-ajax.php",
+            data={
+                'action': 'get_schedule_day',
+                'data': the_date.strftime("%Y-%m-%d"),
+            },
+            headers={
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3',
+            },
+        )
         response.raise_for_status()
-    except requests.exceptions.RequestException as e:
+    except requests.RequestException as e:
         print("Error fetching data:", e)
         return []
 
     programs = []
     soup = BeautifulSoup(response.content, 'html.parser')
-    programs_elements = soup.find_all('li', class_="simcal-event simcal-event-recurring simcal-events-calendar-423 simcal-tooltip")
-    
-    for li in programs_elements:
-        start_span = li.find('span', class_='simcal-event-start')
-        starts = datetime.datetime.strptime(start_span['content'].replace('-04:00', '-0400'), "%Y-%m-%dT%H:%M:%S%z")
-        
-
-        if starts.date() == the_date:
+    for block in soup.find_all("div", class_="row"):
+        try:
+            time_block = block.find('div', class_='convert-time')
+            starts = datetime.datetime.strptime(time_block.attrs['data-date'], "%Y-%m-%d %H:%M:%S")
+            title_elem = block.find('div', class_="program")
+            if title_elem:
+                title = title_elem.text.strip()  
+        except (KeyError, ValueError) as e:
+            print("Error parsing program:", e)
             continue
 
-        title = li.find('span', class_='simcal-event-title').text.strip()
+        
+        if starts == the_date:
+            continue
 
         programs.append({
             "starts": starts.strftime("%H%M"),
             "program_name": title,
-            "duration": None  # Placeholder for duration calculation
+            "duration" : 30
         })
-
     for i in range(len(programs) - 1):
         start_time_next = datetime.datetime.strptime(programs[i + 1]['starts'], "%H%M")
         start_time_current = datetime.datetime.strptime(programs[i]['starts'], "%H%M")
@@ -42,7 +51,8 @@ def get_data(the_date):
     programs.sort(key=lambda x: datetime.datetime.strptime(x['starts'], "%H%M"))
     return programs
 
-class TrawlerCYC(Trawler):
+
+class TrawlerBVOV(Trawler):
     @staticmethod
     def get_info_for_days(days):
         schedule = {}

@@ -3,36 +3,32 @@ from .common import Trawler
 import datetime
 import requests
 from bs4 import BeautifulSoup
-from pytz import timezone
 
 def get_data(the_date):
-
     try:
-        response = requests.get("https://cycnow.com/weekly-schedule/")
+        response = requests.get(
+            "https://hischannel.com/schedule/tv/{}-schedule.html".format(the_date.strftime("%A").lower())
+        )
         response.raise_for_status()
-    except requests.exceptions.RequestException as e:
-        print("Error fetching data:", e)
+    except:
         return []
-
+    
     programs = []
     soup = BeautifulSoup(response.content, 'html.parser')
-    programs_elements = soup.find_all('li', class_="simcal-event simcal-event-recurring simcal-events-calendar-423 simcal-tooltip")
-    
-    for li in programs_elements:
-        start_span = li.find('span', class_='simcal-event-start')
-        starts = datetime.datetime.strptime(start_span['content'].replace('-04:00', '-0400'), "%Y-%m-%dT%H:%M:%S%z")
-        
-
-        if starts.date() == the_date:
+    for block in soup.find_all("tr"):
+        try:
+            starts = datetime.datetime.strptime("{} {}".format(the_date.strftime("%Y-%m-%d"), block.contents[1].text.strip()), "%Y-%m-%d %I:%M %p")
+        except:
             continue
 
-        title = li.find('span', class_='simcal-event-title').text.strip()
-
-        programs.append({
-            "starts": starts.strftime("%H%M"),
-            "program_name": title,
-            "duration": None  # Placeholder for duration calculation
-        })
+        programs.append(
+            {
+                "starts": starts.strftime("%H%M"),
+                "duration": 30,
+               
+                "program_name": block.contents[3].text.split('\xa0')[0],
+            }
+        )
 
     for i in range(len(programs) - 1):
         start_time_next = datetime.datetime.strptime(programs[i + 1]['starts'], "%H%M")
@@ -42,7 +38,9 @@ def get_data(the_date):
     programs.sort(key=lambda x: datetime.datetime.strptime(x['starts'], "%H%M"))
     return programs
 
-class TrawlerCYC(Trawler):
+
+
+class TrawlerHisChannel(Trawler):
     @staticmethod
     def get_info_for_days(days):
         schedule = {}

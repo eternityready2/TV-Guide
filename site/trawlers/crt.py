@@ -1,39 +1,35 @@
 from .common import Trawler
 
 import datetime
+import json
 import requests
-from bs4 import BeautifulSoup
 from pytz import timezone
 
-def get_data(the_date):
 
+def get_data(the_date):
     try:
-        response = requests.get("https://cycnow.com/weekly-schedule/")
+        response = requests.get("https://www.rt.com/schedulejson/news/{}".format(the_date.strftime("%d-%m-%Y")))
         response.raise_for_status()
-    except requests.exceptions.RequestException as e:
-        print("Error fetching data:", e)
+    except:
         return []
 
     programs = []
-    soup = BeautifulSoup(response.content, 'html.parser')
-    programs_elements = soup.find_all('li', class_="simcal-event simcal-event-recurring simcal-events-calendar-423 simcal-tooltip")
-    
-    for li in programs_elements:
-        start_span = li.find('span', class_='simcal-event-start')
-        starts = datetime.datetime.strptime(start_span['content'].replace('-04:00', '-0400'), "%Y-%m-%dT%H:%M:%S%z")
+
+    for show in response.json():
+        starts = datetime.datetime.strptime("{} {} +0000".format(the_date.strftime("%Y-%m-%d"), show['timeLabel']), "%Y-%m-%d %H:%M %z").astimezone(timezone('US/Pacific'))
         
 
-        if starts.date() == the_date:
-            continue
-
-        title = li.find('span', class_='simcal-event-title').text.strip()
+        title = show['programTitle']
+        if 'telecastTitle' in show:
+            title += ": " + show['telecastTitle']
 
         programs.append({
             "starts": starts.strftime("%H%M"),
+            "duration": 30,
             "program_name": title,
-            "duration": None  # Placeholder for duration calculation
         })
 
+    # Adjusting the duration of programs
     for i in range(len(programs) - 1):
         start_time_next = datetime.datetime.strptime(programs[i + 1]['starts'], "%H%M")
         start_time_current = datetime.datetime.strptime(programs[i]['starts'], "%H%M")
@@ -42,7 +38,8 @@ def get_data(the_date):
     programs.sort(key=lambda x: datetime.datetime.strptime(x['starts'], "%H%M"))
     return programs
 
-class TrawlerCYC(Trawler):
+
+class TrawlerRT(Trawler):
     @staticmethod
     def get_info_for_days(days):
         schedule = {}
