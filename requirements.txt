@@ -5,3 +5,8 @@ soupsieve==2.2.1
 urllib3==1.26.4
 requests
 pytz
+numpy
+pandas
+lxml
+bjoern
+selenium

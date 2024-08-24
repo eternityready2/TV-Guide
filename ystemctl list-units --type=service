@@ -1,0 +1,59 @@
+[0;4m [0m[0;4m UNIT                              [0m[0;4m LOAD  [0m[0;4m ACTIVE    [0m[0;4m SUB         [0m[0;4m DESCRIPTION                                                                  [0m
+  accounts-daemon.service            loaded active     running      Accounts Service                                                             
+  apparmor.service                   loaded active     exited       Load AppArmor profiles                                                       
+  apport.service                     loaded active     exited       LSB: automatic crash report generation                                       
+  atd.service                        loaded active     running      Deferred execution scheduler                                                 
+  blk-availability.service           loaded active     exited       Availability of block devices                                                
+[0;1;31m●[0m [0;1;31mcertbot.service                   [0m loaded [0;1;31mfailed    [0m [0;1;31mfailed      [0m Certbot                                                                      
+  console-setup.service              loaded active     exited       Set console font and keymap                                                  
+  cron.service                       loaded active     running      Regular background program processing daemon                                 
+  dbus.service                       loaded active     running      D-Bus System Message Bus                                                     
+  finalrd.service                    loaded active     exited       Create final runtime dir for shutdown pivot root                             
+  getty@tty1.service                 loaded active     running      Getty on tty1                                                                
+  grub-common.service                loaded active     exited       LSB: Record successful boot for GRUB                                         
+  ifup@eth0.service                  loaded active     exited       ifup for eth0                                                                
+  ifupdown-pre.service               loaded active     exited       Helper to synchronize boot up for ifupdown                                   
+  irqbalance.service                 loaded active     running      irqbalance daemon                                                            
+  keyboard-setup.service             loaded active     exited       Set the console keyboard layout                                              
+  kmod-static-nodes.service          loaded active     exited       Create list of static device nodes for the current kernel                    
+  lvm2-monitor.service               loaded active     exited       Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling
+  mariadb.service                    loaded active     running      MariaDB 10.3.39 database server                                              
+  multipathd.service                 loaded active     running      Device-Mapper Multipath Device Controller                                    
+  networking.service                 loaded active     exited       Raise network interfaces                                                     
+  nginx.service                      loaded active     running      nginx - high performance web server                                          
+  php7.4-fpm.service                 loaded active     running      The PHP 7.4 FastCGI Process Manager                                          
+  polkit.service                     loaded active     running      Authorization Manager                                                        
+[0;1;31m●[0m [0;1;31mrc-local.service                  [0m loaded [0;1;31mfailed    [0m [0;1;31mfailed      [0m /etc/rc.local Compatibility                                                  
+  rsyslog.service                    loaded active     running      System Logging Service                                                       
+  setvtrgb.service                   loaded active     exited       Set console scheme                                                           
+  snapd.apparmor.service             loaded active     exited       Load AppArmor profiles managed internally by snapd                           
+  snapd.seeded.service               loaded active     exited       Wait until snapd is fully seeded                                             
+  ssh.service                        loaded active     running      OpenBSD Secure Shell server                                                  
+  systemd-journal-flush.service      loaded active     exited       Flush Journal to Persistent Storage                                          
+  systemd-journald.service           loaded active     running      Journal Service                                                              
+  systemd-logind.service             loaded active     running      Login Service                                                                
+  systemd-modules-load.service       loaded active     exited       Load Kernel Modules                                                          
+  systemd-random-seed.service        loaded active     exited       Load/Save Random Seed                                                        
+  systemd-remount-fs.service         loaded active     exited       Remount Root and Kernel File Systems                                         
+  systemd-sysctl.service             loaded active     exited       Apply Kernel Variables                                                       
+  systemd-sysusers.service           loaded active     exited       Create System Users                                                          
+  systemd-timesyncd.service          loaded active     running      Network Time Synchronization                                                 
+  systemd-tmpfiles-setup-dev.service loaded active     exited       Create Static Device Nodes in /dev                                           
+  systemd-tmpfiles-setup.service     loaded active     exited       Create Volatile Files and Directories                                        
+  systemd-udev-settle.service        loaded active     exited       udev Wait for Complete Device Initialization                                 
+  systemd-udev-trigger.service       loaded active     exited       udev Coldplug all Devices                                                    
+  systemd-udevd.service              loaded active     running      udev Kernel Device Manager                                                   
+  systemd-update-utmp.service        loaded active     exited       Update UTMP about System Boot/Shutdown                                       
+  systemd-user-sessions.service      loaded active     exited       Permit User Sessions                                                         
+  tvguide.service                    loaded activating auto-restart Description for sample script goes here                                      
+  ufw.service                        loaded active     exited       Uncomplicated firewall                                                       
+  unattended-upgrades.service        loaded active     running      Unattended Upgrades Shutdown                                                 
+  user-runtime-dir@1000.service      loaded active     exited       User Runtime Directory /run/user/1000                                        
+  user@1000.service                  loaded active     running      User Manager for UID 1000                                                    
+
+LOAD   = Reflects whether the unit definition was properly loaded.
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+SUB    = The low-level unit activation state, values depend on unit type.
+
+[0;1;39m51 loaded units listed.[0m Pass --all to see loaded but inactive units, too.
+To show all installed unit files use 'systemctl list-unit-files'.

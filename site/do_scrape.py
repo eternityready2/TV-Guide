@@ -2,18 +2,25 @@ import pickle
 import datetime
 import json
 import traceback
+import logging
 from datetime import date, time
-from trawlers import cgttv, cnrb, ccbn, ccyc, cmcca, cin
+from trawlers import cgttv, SidRoth, csafeTV, tct, cLLbn, emmatv, cwgntv, ckchf, njeta, c3abnAll, cwn, ccstv, cetv, cLFT, cTLN, cSLSTV, ckcs_end, cWHTv, c3ABNF, ccbn, csat7A, csat7T, csat7P, csat7K, ccyc, caft, cin, ctw, cicfn, cmnn, ctv45, cgeb, cgodtv, cflnz, cds, cglc, crt, chtv, cptv, cmis, cnm, chc, cbvov, charvesttv, cffe, cad, cWACX, c3abnRussian, csonliveTV, cnh, ckcse, cft, jbs, cabn
+import sys
 
+# Set recursion limit and initialize recursion counter
+sys.setrecursionlimit(50000)
+print("Recursion limit:", sys.getrecursionlimit())
+
+# Initialize global counter for tracking recursion depth
+recursion_counter = 0
+
+logging.basicConfig(level=logging.INFO)
 
 def add_ordinal(n):
-    return str(n) + ("th" if 4 <= n %
-                     100 <= 20 else {1: "st", 2: "nd", 3: "rd"}.get(n % 10, "th"))
-
+    return str(n) + ("th" if 4 <= n % 100 <= 20 else {1: "st", 2: "nd", 3: "rd"}.get(n % 10, "th"))
 
 days = []
 days_js = []
-
 
 def update_days():
     today = datetime.date.today()
@@ -31,360 +38,137 @@ def update_days():
             "human_date": human}
         days_js.append(entry)
 
-
 schedules = {}
 
+def recursive_function_wrapper(func, *args, **kwargs):
+    global recursion_counter
+    recursion_counter += 1
+    return func(*args, **kwargs)
 
 def update_schedules():
     global schedules
 
-    # charvest.TrawlerHarvest.get_info_for_week()
-    # return
+    schedule_data = {
+        1: cgttv.TrawlerGospelTruthTV,
+        2: cmis.TrawlerMyersInfoSys,
+        3: ccbn.TrawlerCBN,
+        5: ccyc.TrawlerCYC,
+        6: cTLN.TrawlerTotalLN,
+        8: ckcs_end.TrawlerKCSETVLifeEnd,
+        9: cin.TrawlerImpactNetwork,
+        10: caft.TrawlerAmazingFactsTV,
+        11: ctw.TrawlerTheWalk,
+        12: cicfn.TrawlerICFN,
+        13: cmnn.TrawlerMNN,
+        14: c3abnRussian.TrawlercRussian, #
+        15: csat7P.TrawlerSAT_7_PARS,
+        16: csat7T.TrawlerSAT_7_TURK,
+        17: csat7A.TrawlerSAT_7_ARABIC,
+        18: ctv45.TrawlerTV45,
+        20: cgeb.TrawlerGEB,
+        21: csonliveTV.TrawlercsonliveTV,
+        22: cWHTv.TrawlerWorldHarvestTV,
+        23: cLFT.TrawlerLivingFTV,
+        24: cflnz.TrawlerFirstLight,
+        25: cds.TrawlerDayStar,
+        26: c3abnAll.Trawlerc3abnLll,
+        27: cSLSTV.TrawlerSmartLSTV,
+        28: tct.Trawlertct,
+        30: cglc.TrawlerGLC,
+        31: emmatv.TrawlerEmmanuelTV,
+        32: cnh.TrawlerNewHope,
+        35: c3ABNF.Trawler3ABNF,
+        36: c3abnAll.Trawlerc3abnLll,
+        37: c3abnAll.Trawlerc3abnLll,
+        39: cWACX.Trawlerwacx,
+        40: cgodtv.TrawlerGodTV,
+        41: cgodtv.TrawlerGodTV,
+        42: cgodtv.TrawlerGodTV,
+        43: cgodtv.TrawlerGodTV,
+        44: cgodtv.TrawlerGodTV,
+        45: cetv.TrawlerCBNFamily,
+        46: csafeTV.TrawlerSafeTv,
+        47: cLLbn.TrawlerCLLBN,
+        48: cLLbn.TrawlerCLLBN,
+        49: cLLbn.TrawlerCLLBN,
+        51: c3abnAll.Trawlerc3abnLll,
+        52: cmis.TrawlerMyersInfoSys,
+        53: cwn.TrawlerWorldNetwork,
+        54: chtv.TrawlerHopeTV,
+        55: ccstv.TrawlerCornerstone,
+        56: cLLbn.TrawlerCLLBN,
+        57: ckchf.Trawlerckchf,
+        59: cabn.TrawlerABN,
+        60: SidRoth.TrawlerSidRoth,
+        61: cmis.TrawlerMyersInfoSys,
+        62: cptv.TrawlerPressTV,
+        63: njeta.TrawlerNjetaTV,
+        64: jbs.TrawlerJewishB,
+        65: cwgntv.TrawlerWGNchicago,
+        66: crt.TrawlerRT,
+        67: cnm.TrawlerNewsMax,
+        68: cft.TrawlerFamilyTV,
+        70: c3abnAll.Trawlerc3abnLll,
+        71: c3abnAll.Trawlerc3abnLll,
+        72: tct.Trawlertct,
+        73: chc.TrawlerHisChannel,
+        75: cbvov.TrawlerBVOV,
+        77: charvesttv.TrawlerHarvestTV,
+        78: csat7K.TrawlerSat7Kids,
+        79: cffe.TrawlerFFE,
+        80: cad.Trawlercad,
+        81: ckcse.TrawlerKCSETVLife,
+    }
 
-    try:
-        schedules.update({"1": cgttv.TrawlerGospelTruthTV.get_info_for_days(days)})
-    except Exception as e:
-        traceback.print_exc()
-        pass
+    extra_args = {
+        2: 'nrb',
+        26: 'main',
+        28: 'hd',
+        36: 'lat',
+        37: 'int',
+        40: 'as',
+        41: 'af',
+        42: 'au',
+        43: 'uk',
+        44: 'us',
+        47: 'llbnlatino',
+        48: 'llbnsouthasia',
+        49: 'llbnarabic',
+        51: 'kids',
+        52: 'gbntv',
+        56: 'hiswordhd',
+        61: 'jltv',
+        70: 'dare',
+        71: 'proc',
+        72: 'kids'
+    }
 
-    try:
-        schedules.update({"2": cnrb.TrawlerNRBNetwork.get_info_for_days(days)})
-    except Exception as e:
-        traceback.print_exc()
-        pass
+    for channel_number in schedule_data:
+        sd = {}
+        try:
+            logging.info("Running {}".format(schedule_data[channel_number].__name__))
+            if channel_number in extra_args:
+                sd = {
+                    str(channel_number): recursive_function_wrapper(
+                        schedule_data[channel_number].get_info_for_days,
+                        days, extra_args[channel_number]
+                    )
+                }
+            else:
+                sd ={
+                    str(channel_number): recursive_function_wrapper(
+                        schedule_data[channel_number].get_info_for_days,
+                        days
+                    )
+                }
+        except Exception as e:
+            sd = []
+            logging.error("Error occurred in scraper {}: {}".format(schedule_data[channel_number].__name__, e))
+            traceback.print_exc()
+            # pass
+        finally:
+            schedules.update(sd)
 
-    try:
-        schedules.update({"3": ccbn.TrawlerCBN.get_info_for_days(days)})
-    except Exception as e:
-        traceback.print_exc()
-        pass
-
-    try:
-        schedules.update({"5": ccyc.TrawlerCYC.get_info_for_days(days)})
-    except Exception as e:
-        traceback.print_exc()
-        pass
-
-    try:
-        schedules.update({"8": cmcca.TrawlerMiracleChannel.get_info_for_days(days)})
-    except Exception as e:
-        traceback.print_exc()
-        pass
-
-    try:
-        schedules.update({"9": cin.TrawlerImpactNetwork.get_info_for_days(days)})
-    except Exception as e:
-        traceback.print_exc()
-        pass
-
-#    try:
-#        schedules.update({"46": ctbn.TrawlerTBN.get_info_for_days(days)})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#    try:
-#        schedules.update(
-#            {"47": cchurchchannel.TrawlerChurchChannel.get_info_for_days(days)})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#    try:
-#        schedules.update({"48": clocatetv.TrawlerLocateTV.get_info_for_days(
-#            days, "smile-of-a-child-network")})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#    try:
-#        schedules.update(
-#            {"49": clocatetv.TrawlerLocateTV.get_info_for_days(days, "jc-tv")})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#    try:
-#        schedules.update({"50": c3abn.Trawler3ABN.get_info_for_days(days)})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#    try:
-#        schedules.update(
-#            {"51": c3abn.Trawler3ABN.get_info_for_days(days, abn_network_id=5)})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#    try:
-#        schedules.update(
-#            {"52": c3abn.Trawler3ABN.get_info_for_days(days, abn_network_id=7)})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#    try:
-#        schedules.update(
-#            {"53": c3abn.Trawler3ABN.get_info_for_days(days, abn_network_id=6)})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#    try:
-#        schedules.update({"54": clocatetv.TrawlerLocateTV.get_info_for_days(
-#            days, "daystar-television-network")})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#    try:
-#        schedules.update(
-#            {"56": clocatetv.TrawlerLocateTV.get_info_for_days(days, "hope-channel")})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#    try:
-#        schedules.update(
-#            {"57": cword.TrawlerWord.get_info_for_week(date.today())})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#    try:
-#        schedules.update(
-#            {"58": clocatetv.TrawlerLocateTV.get_info_for_days(days, "nrb-network")})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#    try:
-#        schedules.update(
-#            {"59": clocatetv.TrawlerLocateTV.get_info_for_days(days, "loma-linda-llbn")})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#    try:
-#        schedules.update({"60": clocatetv.TrawlerLocateTV.get_info_for_days(
-#            days, "cornerstone-television")})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#    try:
-#        schedules.update({"61": ctct.TrawlerTCT.get_info_for_week("tct")})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#    try:
-#        schedules.update({"62": ctct.TrawlerTCT.get_info_for_week("tct-kids")})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#    try:
-#        schedules.update(
-#            {"63": ctct.TrawlerTCT.get_info_for_week("tct-family")})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#    try:
-#        schedules.update({"64": ctytv.TrawlerTY.get_info_for_week()})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#
-#        print("did tytv")
-#
-#    try:
-#        schedules.update(
-#            {"67": cfirstlight.TrawlerFirstlight.get_info_for_days(days)})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#
-#    print("did firstlight")
-#
-#    try:
-#        schedules.update({"72": clocatetv.TrawlerLocateTV.get_info_for_days(
-#            days, "gospel-broadcasting-network")})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#
-#    try:
-#        schedules.update({"74": csky.TrawlerSky.get_info_for_days(days, 585)})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#    try:
-#        schedules.update(
-#            {"77": clocatetv.TrawlerLocateTV.get_info_for_days(days, "enlace")})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#    try:
-#        schedules.update(
-#            {"80": clocatetv.TrawlerLocateTV.get_info_for_days(days, "newsmax-tv")})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#    try:
-#        schedules.update(
-#            {"85": clocatetv.TrawlerLocateTV.get_info_for_days(days, "safe-tv")})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#    try:
-#        schedules.update(
-#            {"86": clocatetv.TrawlerLocateTV.get_info_for_days(days, "russia-today")})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#    try:
-#        schedules.update({"92": csky.TrawlerSky.get_info_for_days(days, 580)})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#    try:
-#        schedules.update({"100": csky.TrawlerSky.get_info_for_days(days, 594)})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#
-#    try:
-#        schedules.update({"101": charvest.TrawlerHarvest.get_info_for_week()})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#
-#    try:
-#        schedules.update(
-#            {"112": clocatetv.TrawlerLocateTV.get_info_for_days(days, "wtgl")})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#
-#    try:
-#        schedules.update({"123": clocatetv.TrawlerLocateTV.get_info_for_days(
-#            days, "family-friendly-entertainment")})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#
-#    try:
-#        schedules.update(
-#            {"129": clocatetv.TrawlerLocateTV.get_info_for_days(days, "kchf")})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#
-#    try:
-#        schedules.update({"140": csubha.TrawlerSubha.get_info_for_week()})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#
-#    try:
-#        schedules.update(
-#            {"163": clocatetv.TrawlerLocateTV.get_info_for_days(days, "impact-network")})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#
-#    try:
-#        schedules.update(
-#            {"105": clocatetv.TrawlerLocateTV.get_info_for_days(days, "kazq")})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#
-#    try:
-#        schedules.update({"119": clocatetv.TrawlerLocateTV.get_info_for_days(
-#            days, "wgn-local-chicago-cw")})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#
-#    try:
-#        schedules.update({"110": clocatetv.TrawlerLocateTV.get_info_for_days(
-#            days, "golden-eagle-broadcasting")})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#
-#    try:
-#        schedules.update({"139": cpress.TrawlerPress.get_info_for_days(days)})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#
-#    try:
-#        schedules.update(
-#            {"150": clocatetv.TrawlerLocateTV.get_info_for_days(days, "jewish-life-tv")})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#
-#    try:
-#        schedules.update(
-#            {"155": cfilmon.TrawlerFilmon.get_info_for_week(2945)})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#
-#    try:
-#        schedules.update({"161": cfilmon.TrawlerFilmon.get_info_for_week(793)})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#
-#    try:
-#        schedules.update({"180": clocatetv.TrawlerLocateTV.get_info_for_days(
-#            days, "total-living-network")})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#
-#    try:
-#        schedules.update({"200": csky.TrawlerSky.get_info_for_days(days, 595)})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#    try:
-#        schedules.update({"201": csky.TrawlerSky.get_info_for_days(days, 587)})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#    try:
-#        schedules.update({"205": csky.TrawlerSky.get_info_for_days(days, 586)})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#    try:
-#        schedules.update({"206": csky.TrawlerSky.get_info_for_days(days, 592)})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#    try:
-#        schedules.update({"207": csky.TrawlerSky.get_info_for_days(days, 581)})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#    try:
-#        pass
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#    try:
-#        schedules.update({"214": clocatetv.TrawlerLocateTV.get_info_for_days(
-#            days, "christian-television-network")})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#
-#    try:
-#        schedules.update({"216": cbetv.TrawlerBE.get_info_for_days(days)})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-#    try:
-#        schedules.update(
-#            {"217": clocatetv.TrawlerLocateTV.get_info_for_days(days, "smart-lifestyle-tv")})
-#    except Exception as e:
-#        traceback.print_exc()
-#        pass
-
-
-    # schedules.update({"56": chope.TrawlerHope.get_info_for_days(days)})
-    # schedules.update({"54": csky.TrawlerSky.get_info_for_days(days, 583)})
 update_days()
 update_schedules()
 
@@ -395,3 +179,9 @@ with open('./cache/days.pickle', 'wb+') as days_dump_handle:
 
 with open('./cache/schedule.pickle', 'wb+') as sched_dump_handle:
     pickle.dump(schedules, sched_dump_handle, protocol=pickle.HIGHEST_PROTOCOL)
+
+# After running the code, if a RecursionError occurs, the following will print the recursion depth.
+try:
+    update_schedules()
+except RecursionError:
+    print(f"Recursion depth reached: {recursion_counter}")

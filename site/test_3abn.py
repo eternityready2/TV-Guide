@@ -1,4 +1,4 @@
-from trawlers.c3abn import Trawler3ABN
+from site.trawlers.c3abnI import Trawler3ABN
 
 print(Trawler3ABN.get_info_for_week(42))
 

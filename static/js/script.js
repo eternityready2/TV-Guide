@@ -8,11 +8,14 @@
 // 	{ day: "Sunday", date: "27th Sept" }
 
 // ];
-
 var GLOBAL_selected_date = "default";
 var GLOBAL_channels = []
 
 var GLOBAL_time_offset = 0.0;
+
+window.onDemandChannels = []
+getOnDemandChannels()
+
 
 // var GLOBAL_done_first = false;
 
@@ -57,15 +60,20 @@ function updateTime() {
 	// var d = new Date()
 	var h = moment().tz("America/Los_Angeles").hour()
 	var m = moment().tz("America/Los_Angeles").minute()
+	h = (new Date()).getHours()  // NEW
+	m = (new Date()).getMinutes() // NEW
 	// var h = d.hour
 	// var m = d.minute
 	var m_f = ((m)/60.0);
 	var t = h + m_f;
 
-	$("#current-time-bar").css("margin-left", (((t+GLOBAL_time_offset) * 240.0) + 90.0) + "px");
+
+	$("#current-time-bar").css("margin-left", (((t) * 240.0) + 90.0) + "px"); // NEW
+	// $("#current-time-bar").css("margin-left", (((t+GLOBAL_time_offset) * 240.0) + 90.0) + "px"); // OLD
 	setTimeout(updateTime, 1000*60);
 	update_pos();
-	return t + GLOBAL_time_offset;
+	return t ; // NEW
+	// return t + GLOBAL_time_offset; // OLD
 }
 
 
@@ -200,14 +208,18 @@ function add_half_hour_markers() {
 function add_programme(program, channel) {
 	var hour = parseFloat(program.starts.substring(0,2));
 	var minutes = parseFloat(program.starts.substring(2,4))/60.0;
-	var start_time = hour+minutes-GLOBAL_time_offset;
+	// var start_time = hour+minutes-GLOBAL_time_offset;
+	var start_time = hour + minutes;
+
+	if ( start_time + (program.duration / 60.0) > 24 ) {
+		return false;
+	}
+
 	// console.log(GLOBAL_time_offset);
 		var PIXELS_PER_MINUTE = 4;
 	var pos = Math.floor((start_time * (PIXELS_PER_MINUTE * 60)+0.0)); //$(channel).attr("data-next-pos");
 
 	var width = program.duration * PIXELS_PER_MINUTE;
-
-
 	var prog_desc = decodeHtml(program.program_name.replace("&amp;", "&").replace("&#8217;", "'"));
 	var desc = $("<span/>").addClass("program-desc").text(prog_desc);
 	var episode_desc = "";
@@ -237,7 +249,7 @@ function populate_channel(chan, dom) {
 		//+ window.location.port + "/schedule/"
 		//+ chan.number + "/" + GLOBAL_selected_date,
 		////cache: false
-		url: "/schedule/" + chan.number + "/" + GLOBAL_selected_date,
+		url: "schedule/" + chan.number + "/" + GLOBAL_selected_date,
 	}).done(function(data) {
 		if (data["error"] == "yes") {
 			err = $("<span/>").addClass("not-found");
@@ -254,6 +266,7 @@ function populate_channel(chan, dom) {
 				add_programme(prog, dom);
 			}
 		}
+
 	});
 
 }
@@ -284,7 +297,7 @@ function add_channel(chan) {
 	var name = $("<div/>").addClass("channel-name").text(chan.name);
 	var logo = $("<div/>").addClass("channel-logo").append(number);
 	logo.css("background-image", "url('static/img/logos_2/" + chan.number + ".jpg')");
-	var dummy = $("<div/>").addClass("channel-logo-dummy");
+	// var dummy = $("<div/>").addClass("channel-logo-dummy");
 	var programs = $("<div/>").addClass("programs");
 
 
@@ -296,7 +309,7 @@ function add_channel(chan) {
 	var channel = $("<div/>").addClass("channel").attr("data-next-pos", 0);
 	logo.appendTo(channel);
 	// name.appendTo(channel);
-	dummy.appendTo(channel);
+	// dummy.appendTo(channel);
 	programs.appendTo(channel);
 
 	channel.appendTo($("#channels-container"));
@@ -319,18 +332,20 @@ function add_channels() {
 	// $('#channels-container').find('*').not('#time-bar').remove();
 	$("#channels-container > *:not('#time-bar, #current-time-bar')").remove();
 	$.ajax({
-		url: "/proxy/channels",  
+		url: "proxy/channels",  
 		cache: true
 	}).done(function(data) {
 		channels = data.channels;
 		GLOBAL_channels = channels;
+        window.GLOBAL_channels = GLOBAL_channels;
 		// alert(html);
 		for (chan_i = 0; chan_i < channels.length; ++chan_i) {
 			var chan = channels[chan_i];
 			add_channel(chan);
 		}
 
-		$("#current-time-bar").height(80*(channels.length+5));
+		$("#current-time-bar").height(83 * channels.length + 40);
+        focusQueriedChannel()
 	});
 	// alert(1);
 }
@@ -350,6 +365,7 @@ function update_pos() {
 		var top = $("#channels-container").scrollTop();
 		$(".channel-logo").css("margin-left", ""+left+"px")
 		$("#time-bar").css("margin-top", ""+top+"px")
+		console.log("POS - update_pos")
 }
 
 $(document).ready(function() {
@@ -390,8 +406,12 @@ $(document).ready(function() {
 	setTimeout(update_pos, 150);
 	setTimeout(update_pos, 500);
 	setTimeout(update_pos, 1500);
-	setTimeout(update_pos, 3000);
+	setTimeout(function(){
+		update_pos()
+		$("#channels-container").scrollLeft(240.0*updateTime());
+	}, 3000);
 	updateTime()
+
 
 	// setInterval(maybe_reenable_days, 1000);
 
@@ -412,6 +432,59 @@ $(document).ready(function() {
 
 	
 
+    
+    
 
 
 });
+
+
+function focusChannel(channelTitle) {
+    const nameEls = document.querySelectorAll('.channel-name')
+    nameEls.forEach(function(el) {
+        if (el.innerText !== channelTitle) return
+        const channelRow = el.parentElement.parentElement.parentElement
+
+    	setTimeout(function() {
+    		if ($(channelRow).prev().attr('id') == 'time-bar') {
+	    		channelRow.scrollIntoView({behavior: 'smooth'})
+	    	} else {
+	    		channelRow.previousElementSibling.scrollIntoView({behavior: 'smooth'})
+	    	}
+    	}, 300);
+
+        channelRow.focus()
+        channelRow.style.backgroundColor = "#222"
+        setTimeout(() => {
+            channelRow.style.backgroundColor = "transparent"
+        }, 4000);
+    })
+}
+
+
+function focusQueriedChannel() {
+    const urlSearchParams = new URLSearchParams(window.location.search)
+    if (!urlSearchParams.has('ch')) return
+    const channelTitle = urlSearchParams.get('ch')
+    focusChannel(channelTitle)
+}
+
+ 
+async function getOnDemandChannels() {
+    try {
+        const response = await fetch('/on-demand/channels', {mode: 'no-cors'})
+        const data = await response.json()
+        window.onDemandChannels = data.channels.map(channel => channel.title)
+    } catch (error) {
+        window.onDemandChannels = []
+    }
+}
+
+function resetHeight() {
+	var vh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty('--vh', vh + 'px');
+}
+window.addEventListener("resize", function() {
+	resetHeight();
+});
+resetHeight();

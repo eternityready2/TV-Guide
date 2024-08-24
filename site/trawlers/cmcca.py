@@ -1,57 +1,74 @@
 from .common import Trawler
-
 import datetime
 import requests
-import re
 from bs4 import BeautifulSoup
 from pytz import timezone
+import re
+import datetime
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
+import time
+from selenium.webdriver.common.by import By
 
+path='./data/chromedriver-linux64/chromedriver'
 def get_data(the_date):
+    central_tz = timezone('America/Chicago')
     try:
-        response = requests.get(
-            "https://miraclechannel.ca/schedule/"
-        )
-        response.raise_for_status()
-    except HTTPError as http_err:
+        # Set up Chrome options
+        chrome_options = Options()
+        chrome_options.add_argument("--headless")  # Run in headless mode
+        chrome_options.add_argument("--disable-gpu")  # Disable GPU rendering (optional, improves performance)
+        chrome_options.add_argument("--disable-notifications")  # Disable notifications
+        chrome_options.add_argument("--no-sandbox")  # Bypass OS security model (for some environments)
+        chrome_options.add_argument("--disable-dev-shm-usage")  # Overcome limited resource problems in containers
+
+        # Set up the WebDriver with options
+        driver = webdriver.Chrome(options=chrome_options)
+
+        # Navigate to the webpage
+        driver.get("https://miraclechannel.ca/schedule/")
+
+        time.sleep(5)
+        # Get the page source after it has fully loaded
+        source = driver.page_source
+        soup = BeautifulSoup(source, 'html.parser')
+        
+
+        driver.quit()  # Close the WebDriver
+
+    except Exception as e:
+        print(f"Error fetching data: {e}")
         return []
 
     programs = []
-    soup = BeautifulSoup(response.content, 'html.parser')
-    wanted_weekday = the_date.weekday()
-    skip = [0,0,0,0,0,0,0]
-    for row in soup.find_all('table', class_="tt_timetable")[1].find_all('tr'):
-        # cells contains
-        # [time] - mon, tue, wed, thu, fri, sat, sun
-        cells = row.find_all('td')
+    
+    # The schedule is organized by time slots and program details
+    slots = soup.find_all('div', class_='schedule_widget__slot')
+    cards = soup.find_all('div', class_='schedule_widget__card-wrapper')
 
-        index = 1
-        for day in range(7):
-            if skip[day] > 0:
-                skip[day] -= 1
-                continue
 
-            if cells[index].has_attr('rowspan'):
-                skip[day] = int(cells[index]['rowspan'])-1
+    for slot, card in zip(slots, cards):
+        time_str = slot.text.strip()
+        program_name = card.find('div', class_='schedule_widget__card-inner-title').text.strip()
 
-            if wanted_weekday == day:
-                starts = datetime.datetime.strptime("{} {}".format(the_date.strftime("%Y-%m-%d"), cells[0].text.strip()), "%Y-%m-%d %I:%M %p")
-                starts = timezone('MST').localize(starts).astimezone(timezone('US/Pacific'))
-                duration = 30
-                if cells[index].has_attr('rowspan'):
-                    duration = 30 * int(cells[index]['rowspan'])
+        start_time = datetime.datetime.strptime("{} {} -0600".format(the_date.strftime("%Y-%m-%d"), time_str), "%Y-%m-%d %I:%M %p %z")
+        start_time = start_time.astimezone(central_tz)
 
-                if starts.date() != the_date:
-                    continue
+        if start_time.date() == the_date:
+            duration_text = card.find('div', class_='schedule_widget__card-inner-duration').text.strip()
+            duration_match = re.search(r'(\d+)', duration_text)
+
+            if duration_match:  # Ensure that a match is found before accessing group(1)
+                duration = int(duration_match.group(1))
 
                 programs.append({
-                    "date": starts.strftime("%Y-%m-%d"),
-                    "starts": starts.strftime("%H%M"),
+                    "starts": start_time.strftime("%H%M"),
                     "duration": duration,
-                    "program_name": cells[index].find('a', class_='event_header').text.strip()
+                    "program_name": program_name
                 })
 
-            index += 1
-
+    programs.sort(key=lambda x: datetime.datetime.strptime(x['starts'], "%H%M"))
     return programs
 
 

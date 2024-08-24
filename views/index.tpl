@@ -1,9 +1,22 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-29835449-5"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-29835449-5');
+		</script>
+
+
 		<title>Guide - Eternity Ready TV</title>
+		<base href="/live-tv/" />
 		<link href="static/css/reset.css" rel="stylesheet">
 		<link href="static/css/style.css" rel="stylesheet">
+		<link href="static/iframe/iframe.css" rel="stylesheet">
 
 		<!-- <link rel="shortcut icon" href="favicon.ico" /> -->
 
@@ -12,10 +25,13 @@
 		<script src="static/js/moment.js"></script>
 		<script src="static/js/moment-timezone-with-data.js"></script>
 		<script src="static/js/script.js"></script>
+		<script src="static/iframe/iframe-data.js"></script>		
+		<script src="static/iframe/iframe.js"></script>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
-		<!-- <meta name="viewport" content="width=device-width; maximum-scale=1; minimum-scale=1;" /> -->
-		<!-- <meta name="viewport" content="width=480; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"> <meta name="MobileOptimized" content="480">  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<div id="darken"></div>
@@ -60,7 +76,7 @@
 						</div>
 						<div class="channel">
 							<div class="channel-logo"></div>
-							<div class="channel-logo-dummy"></div>
+							<!-- <div class="channel-logo-dummy"></div> -->
 
 							<div class="programs">
 								<div class="program">

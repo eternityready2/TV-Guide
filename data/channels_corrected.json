@@ -1,529 +1,409 @@
 {
-    "channels": [
-        {
-            "name": "Gospel Truth TV",
-            "number": "1",
-            "schedule_url": "https://www.gospeltruth.tv/#"
-        },
-        {
-            "name": "NRB Network",
-            "number": "2",
-            "schedule_url": "http://proweb.myersinfosys.com/nrb/week?date=&nocache=rp5ah"
-        },
-        {
-            "name": "CBN News",
-            "number": "3",
-            "schedule_url": "https://www1.cbn.com/cbnnews/newschannel/schedule"
-        },
-        {
-            "name": "Mission TV",
-            "number": "4",
-            "schedule_url": ""
-        },
-        {
-            "name": "Christian Youth Channel",
-            "number": "5",
-            "schedule_url": "https://cycnow.com/todays-schedule/"
-        },
-        {
-            "name": "Total Living Network",
-            "number": "6",
-            "schedule_url": "https://img1.wsimg.com/blobby/go/3feda5c7-1670-4073-8f5f-2323c6ba8294/downloads/ProGramGuide_TLN_April2021.png?ver=1619030530916"
-        },
-        {
-            "name": "Western TV",
-            "number": "7",
-            "schedule_url": ""
-        },
-        {
-            "name": "Miracle Channel",
-            "number": "8",
-            "schedule_url": "https://miraclechannel.ca/schedule/"
-        },
-        {
-            "name": "Impact Network",
-            "number": "9",
-            "schedule_url": "https://watchimpact.com/schedule/"
-        },
-        {
-            "name": "FaithLife TV",
-            "number": "10",
-            "schedule_url": ""
-        },
-        {
-            "name": "THE WALK TV",
-            "number": "11",
-            "schedule_url": "http://thewalk.tv/schedule/"
-        },
-        {
-            "name": "ICFN",
-            "number": "12",
-            "schedule_url": "https://www.icfn.tv/tv-schedule/"
-        },
-        {
-            "name": "IGNITE CHURCH TV",
-            "number": "13",
-            "schedule_url": "https://igniteyourlife.tv/schedule/"
-        },
-        {
-            "name": "MNN SPIRIT CHANNEL",
-            "number": "14",
-            "schedule_url": "https://www.mnn.org/watch/tv-schedule"
-        },
-        {
-            "name": "3ABN Russia",
-            "number": "15",
-            "schedule_url": "https://3abn.org/schedule.html"
-        },
-        {
-            "name": "SAT7 PARS",
-            "number": "16",
-            "schedule_url": "https://www.sat7pars.com/fa/broadcast-schedule"
-        },
-        {
-            "name": "SAT7 TURK",
-            "number": "17",
-            "schedule_url": "https://sat7.org/event-schedule"
-        },
-        {
-            "name": "SAT7 ARABIC",
-            "number": "18",
-            "schedule_url": "https://www.sat7arabic.com/schedule"
-        },
-        {
-            "name": "GOOD LIFE 45",
-            "number": "19",
-            "schedule_url": "https://www.tv45.org/dailyschedule"
-        },
-        {
-            "name": "ACBN INTL",
-            "number": "20",
-            "schedule_url": "https://acbntv.org/schedule/"
-        },
-        {
-            "name": "GEB America",
-            "number": "21",
-            "schedule_url": "https://geb.tv/schedule/"
-        },
-        {
-            "name": "TRUE GOD TV",
-            "number": "22",
-            "schedule_url": "https://www.god.tv/schedules/"
-        },
-        {
-            "name": "SonLife TV",
-            "number": "23",
-            "schedule_url": ""
-        },
-        {
-            "name": "World Harvest Television",
-            "number": "24",
-            "schedule_url": "https://www.directv.com/Channels/World-Harvest-Television-367?lpos=Footer:2&format=SD"
-        },
-        {
-            "name": "Living Faith TV",
-            "number": "25",
-            "schedule_url": "http://new.livingfaithtv.com/programming/"
-        },
-        {
-            "name": "Firstlight",
-            "number": "26",
-            "schedule_url": "https://www.firstlight.org.nz/schedule/"
-        },
-        {
-            "name": "Day Star",
-            "number": "27",
-            "schedule_url": "https://schedulemini.daystar.com/"
-        },
-        {
-            "name": "3ABN",
-            "number": "28",
-            "schedule_url": "https://3abn.org/schedule.html"
-        },
-        {
-            "name": "Smart Life Style TV",
-            "number": "29",
-            "schedule_url": "https://www.smartlifestyletv.com/schedule"
-        },
-        {
-            "name": "JESUS PEOPLE TV",
-            "number": "30",
-            "schedule_url": ""
-        },
-        {
-            "name": "TCT HD",
-            "number": "31",
-            "schedule_url": "https://www.tct.tv/watch-tct/schedules/tct-hd-broadcast-schedule/"
-        },
-        {
-            "name": "GOSPEL PRAISE TV",
-            "number": "32",
-            "schedule_url": "https://gospel.tv/watch/europe/schedule/"
-        },
-        {
-            "name": "Ref Net",
-            "number": "33",
-            "schedule_url": "https://refnet.fm/schedule"
-        },
-        {
-            "name": "Christian Television Network",
-            "number": "34",
-            "schedule_url": "https://www.ctnonline.com/schedules.html"
-        },
-        {
-            "name": "God's Learning Channel",
-            "number": "35",
-            "schedule_url": "https://glc.us.com/layout-general-info-2-3/"
-        },
-        {
-            "name": "Emmanuel TV",
-            "number": "36",
-            "schedule_url": ""
-        },
-        {
-            "name": "119 MINISTRIES TV",
-            "number": "37",
-            "schedule_url": ""
-        },
-        {
-            "name": "NEW HOPE TV",
-            "number": "38",
-            "schedule_url": "https://newhopetv.org/program-guide/"
-        },
-        {
-            "name": "PAUL WHITE MINISTRIES",
-            "number": "39",
-            "schedule_url": "https://paulawhite.org/tv-broadcast-schedule/"
-        },
-        {
-            "name": "EC12ONETV",
-            "number": "40",
-            "schedule_url": "https://ec12onetv.com/projects-2/"
-        },
-        {
-            "name": "Bible Discovery TV",
-            "number": "41",
-            "schedule_url": ""
-        },
-        {
-            "name": "WOCB",
-            "number": "42",
-            "schedule_url": "https://coacb.org/wp-content/uploads/2019/06/COACB-TCT-February.pdf"
-        },
-        {
-            "name": "3ABN Francias",
-            "number": "43",
-            "schedule_url": "https://3abn.org/schedule.html"
-        },
-        {
-            "name": "SUBHAVAARTHA TV",
-            "number": "44",
-            "schedule_url": ""
-        },
-        {
-            "name": "TED TALKS",
-            "number": "45",
-            "schedule_url": ""
-        },
-        {
-            "name": "NICK VUJICIC TV",
-            "number": "46",
-            "schedule_url": ""
-        },
-        {
-            "name": "3ABN Latino",
-            "number": "47",
-            "schedule_url": "https://3abn.org/schedule.html"
-        },
-        {
-            "name": "3ABN International",
-            "number": "48",
-            "schedule_url": "https://r.3abn.org/sched/latest/?channel=int"
-        },
-        {
-            "name": "LOVEWORLD TV",
-            "number": "49",
-            "schedule_url": "https://www.loveworldusa.org/schedule/"
-        },
-        {
-            "name": "Soul Pancake TV",
-            "number": "50",
-            "schedule_url": ""
-        },
-        {
-            "name": "SuperChannel  (WACX -DTV Orlando, Florida)",
-            "number": "51",
-            "schedule_url": "https://www.wacxtv.com/ProgramSchedule.aspx"
-        },
-        {
-            "name": "God Television (Asia)",
-            "number": "52",
-            "schedule_url": "https://www.god.tv/schedules/"
-        },
-        {
-            "name": "God Television (Africa- Satellite Live)",
-            "number": "53",
-            "schedule_url": "https://www.god.tv/schedules/"
-        },
-        {
-            "name": "God Television (Australia)",
-            "number": "54",
-            "schedule_url": "https://www.god.tv/schedules/"
-        },
-        {
-            "name": "God Television (UK - Satellite Live)",
-            "number": "55",
-            "schedule_url": "https://www.god.tv/schedules/"
-        },
-        {
-            "name": "God Television (USA- Main Flagship Live)",
-            "number": "56",
-            "schedule_url": "https://www.god.tv/schedules/"
-        },
-        {
-            "name": "CBN Family",
-            "number": "57",
-            "schedule_url": ""
-        },
-        {
-            "name": "Safe TV",
-            "number": "58",
-            "schedule_url": "http://www.safetv.org/schedule.pdf"
-        },
-        {
-            "name": "LLBN LATINO",
-            "number": "59",
-            "schedule_url": "https://www.llbnlatino.tv/horarios"
-        },
-        {
-            "name": "LLBN Asia",
-            "number": "60",
-            "schedule_url": "https://www.llbnsa.tv/schedule"
-        },
-        {
-            "name": "LLBN Arabic",
-            "number": "61",
-            "schedule_url": "https://www.llbnarabic.tv/schedule"
-        },
-        {
-            "name": "Inspiration TV",
-            "number": "62",
-            "schedule_url": "https://www.insp.com/schedule/"
-        },
-        {
-            "name": "SIBN - Streaming Inspiration",
-            "number": "63",
-            "schedule_url": ""
-        },
-        {
-            "name": "Gospel Broadcasting Network",
-            "number": "64",
-            "schedule_url": "https://gbntv.org/view-schedule/"
-        },
-        {
-            "name": "The Word Network",
-            "number": "65",
-            "schedule_url": ""
-        },
-        {
-            "name": "Hope Channel",
-            "number": "66",
-            "schedule_url": "https://www.hopetv.org/shows/camporee/schedule/"
-        },
-        {
-            "name": "John Hagee (GETV)",
-            "number": "67",
-            "schedule_url": ""
-        },
-        {
-            "name": "Corner Stone TV",
-            "number": "68",
-            "schedule_url": "https://www.ctvn.org/print-monthly-schedule-2/"
-        },
-        {
-            "name": "LLBN",
-            "number": "69",
-            "schedule_url": "https://www.llbn.tv/schedule"
-        },
-        {
-            "name": "Elevation Church",
-            "number": "70",
-            "schedule_url": ""
-        },
-        {
-            "name": "Son Broadcasting Network",
-            "number": "71",
-            "schedule_url": "https://www.sonbroadcasting.org/sunday.html"
-        },
-        {
-            "name": "BEVERLY HILLBILLIES TV",
-            "number": "72",
-            "schedule_url": ""
-        },
-        {
-            "name": "ABN AFRICA",
-            "number": "73",
-            "schedule_url": "https://www.abnchannel.net/schedule.php"
-        },
-        {
-            "name": "JERUSALEM CHANNEL",
-            "number": "74",
-            "schedule_url": ""
-        },
-        {
-            "name": "Impact Network",
-            "number": "75",
-            "schedule_url": "https://watchimpact.com/schedule/"
-        },
-        {
-            "name": "JLTV",
-            "number": "76",
-            "schedule_url": "https://www.jltv.tv/schedule.php"
-        },
-        {
-            "name": "Press TV",
-            "number": "77",
-            "schedule_url": "https://www.presstv.com/default/schedule"
-        },
-        {
-            "name": "RT News (US)",
-            "number": "78",
-            "schedule_url": "https://www.rt.com/schedule/usa/"
-        },
-        {
-            "name": "Nejat TV",
-            "number": "79",
-            "schedule_url": ""
-        },
-        {
-            "name": "Jewish Broadcasting",
-            "number": "80",
-            "schedule_url": "https://jbstv.org/jbs-schedule/"
-        },
-        {
-            "name": "What America Thinks",
-            "number": "81",
-            "schedule_url": "https://thinktv.org/schedule/"
-        },
-        {
-            "name": "Health TV",
-            "number": "82",
-            "schedule_url": "https://allhealthtv.com/schedule/"
-        },
-        {
-            "name": "CANAL 17 TV",
-            "number": "83",
-            "schedule_url": ""
-        },
-        {
-            "name": "WGN Chicago",
-            "number": "84",
-            "schedule_url": "https://wgntv.com/on-air/program-schedule/"
-        },
-        {
-            "name": "RT News (Russia)",
-            "number": "85",
-            "schedule_url": "https://www.rt.com/schedule/"
-        },
-        {
-            "name": "Newsmax",
-            "number": "86",
-            "schedule_url": "https://www.newsmaxtv.com/#schedule-section"
-        },
-        {
-            "name": "Christian Youth Channel",
-            "number": "87",
-            "schedule_url": "https://cycnow.com/todays-schedule/"
-        },
-        {
-            "name": "Family TV",
-            "number": "88",
-            "schedule_url": "https://www.family.ca/watch/"
-        },
-        {
-            "name": "Filmon Tv",
-            "number": "89",
-            "schedule_url": "https://www.filmon.com/tvguide/"
-        },
-        {
-            "name": "3ABN! Dare to Dream",
-            "number": "90",
-            "schedule_url": "http://3abn.com/Schedule/DaretoDream/01-26.html"
-        },
-        {
-            "name": "3ABN Proclaim",
-            "number": "91",
-            "schedule_url": "https://r.3abn.org/sched/latest/?channel=proc"
-        },
-        {
-            "name": "TCT Kids",
-            "number": "92",
-            "schedule_url": "https://www.tct.tv/watch-tct/schedules/tct-kids-broadcast-schedule/"
-        },
-        {
-            "name": "SuperChannel (WACX -DTV Orlando, Florida)",
-            "number": "93",
-            "schedule_url": "https://www.wacxtv.com/ProgramSchedule.aspx"
-        },
-        {
-            "name": "LOVEWORLD TV",
-            "number": "94",
-            "schedule_url": "https://www.loveworldusa.org/schedule/"
-        },
-        {
-            "name": "His Channel",
-            "number": "95",
-            "schedule_url": "https://www.hischannel.com/schedule/"
-        },
-        {
-            "name": "JESUS KIDS TV",
-            "number": "96",
-            "schedule_url": ""
-        },
-        {
-            "name": "Ihop (24/7 Prayer & Worship)",
-            "number": "97",
-            "schedule_url": ""
-        },
-        {
-            "name": "Revelation TV",
-            "number": "98",
-            "schedule_url": "https://www.revelationtv.com/schedule"
-        },
-        {
-            "name": "Believers Voice of Victory",
-            "number": "99",
-            "schedule_url": "https://www.govictory.com/schedule/"
-        },
-        {
-            "name": "Spirit Television",
-            "number": "100",
-            "schedule_url": ""
-        },
-        {
-            "name": "HARVEST TV",
-            "number": "101",
-            "schedule_url": "https://harvesttv.in/schedule/"
-        },
-        {
-            "name": "SAT 7 Kids",
-            "number": "102",
-            "schedule_url": "https://www.sat7kids.com/schedule/en"
-        },
-        {
-            "name": "Family Friendly Entertainment",
-            "number": "103",
-            "schedule_url": "https://familyfriendlye.com/television-schedule/"
-        },
-        {
-            "name": "Amazing Discoveries TV",
-            "number": "104",
-            "schedule_url": "https://amazingdiscoveries.org/amazing-discoveries-satellite-schedule"
-        },
-        {
-            "name": "KSCE Life! (KSCE TV- El Paso, Texas)",
-            "number": "105",
-            "schedule_url": "https://lifechristian.tv/schedule"
-        }
-    ]
+   "channels": [
+      {
+         "name": "Gospel Truth TV",
+         "number": "1",
+         "schedule_url": "https://www.gospeltruth.tv/#"
+      },
+      {
+         "name": "NRB Network",
+         "number": "2",
+         "schedule_url": "http://proweb.myersinfosys.com/nrb/week?date=&nocache=rp5ah"
+      },
+      {
+         "name": "CBN News",
+         "number": "3",
+         "schedule_url": "https://www1.cbn.com/cbnnews/newschannel/schedule"
+      },
+      {
+         "name": "Mission TV",
+         "number": "4",
+         "schedule_url": ""
+      },
+      {
+         "name": "Christian Youth Channel",
+         "number": "5",
+         "schedule_url": "https://cycnow.com/weekly-schedule/"
+      },
+      {
+         "name": "Total Living Network",
+         "number": "6",
+         "schedule_url": "https://img1.wsimg.com/blobby/go/3feda5c7-1670-4073-8f5f-2323c6ba8294/downloads/ProGramGuide_TLN_April2021.png?ver=1619030530916"
+      },
+      {
+         "name": "The Western Channel",
+         "number": "7",
+         "schedule_url": ""
+      },
+      {
+         "name": "KSCE Life! End Times TV",
+         "number": "8",
+         "schedule_url": "https://lifeendtimes.tv/"
+      },
+      {
+         "name": "Impact Network",
+         "number": "9",
+         "schedule_url": "https://watchimpact.com/schedule/"
+      },
+      {
+         "name": "Amazing Facts TV",
+         "number": "10",
+         "schedule_url": "https://www.amazingfacts.org/media-library/program-schedule"
+      },
+      {
+         "name": "THE WALK TV",
+         "number": "11",
+         "schedule_url": "http://thewalk.tv/schedule/"
+      },
+      {
+         "name": "ICFN",
+         "number": "12",
+         "schedule_url": "https://www.icfn.tv/tv-schedule/"
+      },
+      {
+         "name": "MNN SPIRIT CHANNEL",
+         "number": "13",
+         "schedule_url": "https://www.mnn.org/watch/tv-schedule"
+      },
+      {
+         "name": "3ABN Russia",
+         "number": "14",
+         "schedule_url": "https://r.3abn.org/sched-app/#/print"
+      },
+      {
+         "name": "SAT7 PARS",
+         "number": "15",
+         "schedule_url": "https://www.sat7pars.com/fa/broadcast-schedule"
+      },
+      {
+         "name": "SAT7 TURK",
+         "number": "16",
+         "schedule_url": "https://sat7.org/event-schedule"
+      },
+      {
+         "name": "SAT7 ARABIC",
+         "number": "17",
+         "schedule_url": "https://www.sat7arabic.com/schedule"
+      },
+      {
+         "name": "GOOD LIFE 45",
+         "number": "18",
+         "schedule_url": "https://www.tv45.org/dailyschedule"
+      },
+      {
+         "name": "Spirit TV",
+         "number": "19",
+         "schedule_url": "https://acbntv.org/schedule/"
+      },
+      {
+         "name": "GEB America",
+         "number": "20",
+         "schedule_url": "https://geb.tv/schedule/"
+      },
+      {
+         "name": "SonLife TV",
+         "number": "21",
+         "schedule_url": ""
+      },
+      {
+         "name": "World Harvest Television",
+         "number": "22",
+         "schedule_url": "https://www.directv.com/Channels/World-Harvest-Television-367?lpos=Footer:2&format=SD"
+      },
+      {
+         "name": "Living Faith TV",
+         "number": "23",
+         "schedule_url": "http://new.livingfaithtv.com/programming/"
+      },
+      {
+         "name": "Firstlight",
+         "number": "24",
+         "schedule_url": "https://www.firstlight.org.nz/schedule/"
+      },
+      {
+         "name": "Day Star",
+         "number": "25",
+         "schedule_url": "https://schedulemini.daystar.com/"
+      },
+      {
+         "name": "3ABN",
+         "number": "26",
+         "schedule_url": ""
+      },
+      {
+         "name": "Smart Life Style TV",
+         "number": "27",
+         "schedule_url": "https://www.smartlifestyletv.com/schedule"
+      },
+      {
+         "name": "TCT HD",
+         "number": "28",
+         "schedule_url": "https://www.tct.tv/watch-tct/schedules/tct-hd-broadcast-schedule/"
+      },
+      {
+         "name": "Christian Television Network",
+         "number": "29",
+         "schedule_url": "https://www.ctnonline.com/schedules.html"
+      },
+      {
+         "name": "God's Learning Channel",
+         "number": "30",
+         "schedule_url": "https://glc.us.com/layout-general-info-2-3/"
+      },
+      {
+         "name": "Emmanuel TV",
+         "number": "31",
+         "schedule_url": ""
+      },
+      {
+         "name": "NEW HOPE TV",
+         "number": "32",
+         "schedule_url": "https://newhopetv.org/program-guide/"
+      },
+      {
+         "name": "Bible Discovery TV",
+         "number": "33",
+         "schedule_url": ""
+      },
+      {
+         "name": "WOCB",
+         "number": "34",
+         "schedule_url": "https://coacb.org/wp-content/uploads/2019/06/COACB-TCT-February.pdf"
+      },
+      {
+         "name": "3ABN Francias",
+         "number": "35",
+         "schedule_url": "https://3abn.org/schedule.html"
+      },
+      {
+         "name": "3ABN Latino",
+         "number": "36",
+         "schedule_url": "https://3abn.org/schedule.html"
+      },
+      {
+         "name": "3ABN International",
+         "number": "37",
+         "schedule_url": "https://r.3abn.org/sched/latest/?channel=int"
+      },
+      {
+         "name": "LOVEWORLD TV",
+         "number": "38",
+         "schedule_url": "https://www.loveworldusa.org/schedule/"
+      },
+      {
+         "name": "SuperChannel  (WACX -DTV Orlando, Florida)",
+         "number": "39",
+         "schedule_url": "https://www.wacxtv.com/ProgramSchedule.aspx"
+      },
+      {
+         "name": "God Television (Asia)",
+         "number": "40",
+         "schedule_url": "https://www.god.tv/schedules/"
+      },
+      {
+         "name": "God Television (Africa- Satellite Live)",
+         "number": "41",
+         "schedule_url": "https://www.god.tv/schedules/"
+      },
+      {
+         "name": "God Television (Australia)",
+         "number": "42",
+         "schedule_url": "https://www.god.tv/schedules/"
+      },
+      {
+         "name": "God Television (UK - Satellite Live)",
+         "number": "43",
+         "schedule_url": "https://www.god.tv/schedules/"
+      },
+      {
+         "name": "God Television (USA- Main Flagship Live)",
+         "number": "44",
+         "schedule_url": "https://www.god.tv/schedules/"
+      },
+      {
+         "name": "CBN Family",
+         "number": "45",
+         "schedule_url": ""
+      },
+      {
+         "name": "Safe TV",
+         "number": "46",
+         "schedule_url": "http://www.safetv.org/schedule.pdf"
+      },
+      {
+         "name": "LLBN LATINO",
+         "number": "47",
+         "schedule_url": "https://www.llbnlatino.tv/horarios"
+      },
+      {
+         "name": "LLBN Asia",
+         "number": "48",
+         "schedule_url": "https://www.llbnsa.tv/schedule"
+      },
+      {
+         "name": "LLBN Arabic",
+         "number": "49",
+         "schedule_url": "https://www.llbnarabic.tv/schedule"
+      },
+      {
+         "name": "Inspiration TV",
+         "number": "50",
+         "schedule_url": "https://inspiration.org/tv/livestream#schedule"
+      },
+      {
+         "name": "3ABN Kids",
+         "number": "51",
+         "schedule_url": ""
+      },
+      {
+         "name": "Gospel Broadcasting Network",
+         "number": "52",
+         "schedule_url": "https://gbntv.org/view-schedule/"
+      },
+      {
+         "name": "The Word Network",
+         "number": "53",
+         "schedule_url": ""
+      },
+      {
+         "name": "Hope Channel",
+         "number": "54",
+         "schedule_url": "https://www.hopetv.org/shows/camporee/schedule/"
+      },
+      {
+         "name": "Corner Stone TV",
+         "number": "55",
+         "schedule_url": "https://www.ctvn.org/print-monthly-schedule-2/"
+      },
+      {
+         "name": "LLBN",
+         "number": "56",
+         "schedule_url": "https://www.llbn.tv/schedule"
+      },
+      {
+         "name": "Son Broadcasting Network",
+         "number": "57",
+         "schedule_url": "https://www.kchftv.org/schedule.html"
+      },
+      {
+         "name": "BEVERLY HILLBILLIES TV",
+         "number": "58",
+         "schedule_url": ""
+      },
+      {
+         "name": "ABN AFRICA",
+         "number": "59",
+         "schedule_url": "https://www.abnchannel.net/schedule.php"
+      },
+      {
+         "name": "Sid Roth - It's Supernatural Network",
+         "number": "60",
+         "schedule_url": ""
+      },
+      {
+         "name": "JLTV",
+         "number": "61",
+         "schedule_url": "https://www.jltv.tv/schedule.php"
+      },
+      {
+         "name": "Press TV",
+         "number": "62",
+         "schedule_url": "https://www.presstv.com/default/schedule"
+      },
+      {
+         "name": "Nejat TV",
+         "number": "63",
+         "schedule_url": ""
+      },
+      {
+         "name": "Jewish Broadcasting",
+         "number": "64",
+         "schedule_url": "https://jbstv.org/jbs-schedule/"
+      },
+      {
+         "name": "WGN Chicago",
+         "number": "65",
+         "schedule_url": "https://wgntv.com/on-air/program-schedule/"
+      },
+      {
+         "name": "RT News",
+         "number": "66",
+         "schedule_url": "https://www.rt.com/schedule/"
+      },
+      {
+         "name": "Newsmax",
+         "number": "67",
+         "schedule_url": "https://www.newsmaxtv.com/#schedule-section"
+      },
+      {
+         "name": "Family TV",
+         "number": "68",
+         "schedule_url": "https://www.family.ca/watch/"
+      },
+      {
+         "name": "Filmon Tv",
+         "number": "69",
+         "schedule_url": "https://www.filmon.com/tvguide/"
+      },
+      {
+         "name": "3ABN! Dare to Dream",
+         "number": "70",
+         "schedule_url": "http://3abn.com/Schedule/DaretoDream/01-26.html"
+      },
+      {
+         "name": "3ABN Proclaim",
+         "number": "71",
+         "schedule_url": "https://r.3abn.org/sched/latest/?channel=proc"
+      },
+      {
+         "name": "TCT Kids",
+         "number": "72",
+         "schedule_url": "https://www.tct.tv/watch-tct/schedules/tct-kids-broadcast-schedule/"
+      },
+      {
+         "name": "His Channel",
+         "number": "73",
+         "schedule_url": "https://www.hischannel.com/schedule/"
+      },
+      {
+         "name": "Ihop (24/7 Prayer & Worship)",
+         "number": "74",
+         "schedule_url": ""
+      },
+      {
+         "name": "Believers Voice of Victory",
+         "number": "75",
+         "schedule_url": "https://www.govictory.com/schedule/"
+      },
+      {
+         "name": "VertiZontal Media",
+         "number": "76",
+         "schedule_url": ""
+      },
+      {
+         "name": "HARVEST TV",
+         "number": "77",
+         "schedule_url": "https://harvesttv.in/schedule/"
+      },
+      {
+         "name": "SAT 7 Kids",
+         "number": "78",
+         "schedule_url": "https://sat7plus.org/programgrid"
+      },
+      {
+         "name": "Family Friendly Entertainment",
+         "number": "79",
+         "schedule_url": "https://familyfriendlye.com/television-schedule/"
+      },
+      {
+         "name": "Amazing Discoveries TV",
+         "number": "80",
+         "schedule_url": "https://amazingdiscoveries.org/amazing-discoveries-satellite-schedule"
+      },
+      {
+         "name": "KSCE-TV Life!",
+         "number": "81",
+         "schedule_url": "https://lifechristian.tv/schedule"
+      }
+   ]
 }

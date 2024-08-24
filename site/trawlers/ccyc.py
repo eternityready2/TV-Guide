@@ -1,49 +1,44 @@
 from .common import Trawler
-
 import datetime
 import requests
-import re
 from bs4 import BeautifulSoup
 from pytz import timezone
 
 def get_data(the_date):
+    central_tz = timezone('America/Chicago')
     try:
-        response = requests.get(
-            "https://cycnow.com/weekly-schedule/"
-        )
+        response = requests.get("https://cycnow.com/weekly-schedule/")
         response.raise_for_status()
-    except HTTPError as http_err:
+    except requests.exceptions.RequestException as e:
+        print("Error fetching data:", e)
         return []
 
     programs = []
     soup = BeautifulSoup(response.content, 'html.parser')
-    for li in soup.find_all('li', attrs={'itemscope': True}):
+    programs_elements = soup.find_all('li', class_="simcal-event simcal-event-recurring simcal-events-calendar-423 simcal-tooltip")
+    
+    for li in programs_elements:
         start_span = li.find('span', class_='simcal-event-start')
         starts = datetime.datetime.strptime(start_span['content'].replace('-04:00', '-0400'), "%Y-%m-%dT%H:%M:%S%z")
-        starts_pacific = starts.astimezone(timezone('US/Pacific'))
-        if starts_pacific.date() != the_date:
-            continue
+        starts = starts.astimezone(central_tz)
 
-        title = li.find('span', class_='simcal-event-title').text.strip()
+        if starts.date() == the_date:
 
-        programs.append(
-            {
-                "date": starts_pacific.strftime("%Y-%m-%d"),
-                "starts": starts_pacific.strftime("%H%M"),
+            title = li.find('span', class_='simcal-event-title').text.strip()
+
+            programs.append({
+                "starts": starts.strftime("%H%M"),
                 "program_name": title,
-                "epoch": int(start_span['data-event-start']),
-                "duration": 60
-            }
-        )
+                "duration": None  # Placeholder for duration calculation
+            })
 
-    length = len(programs)
-    for i in range(length):
-        if i < length-1:
-            programs[i]['duration'] = (programs[i+1]['epoch'] - programs[i]['epoch'])/60
-        del programs[i]['epoch']
-
+    for i in range(len(programs) - 1):
+        start_time_next = datetime.datetime.strptime(programs[i + 1]['starts'], "%H%M")
+        start_time_current = datetime.datetime.strptime(programs[i]['starts'], "%H%M")
+        duration_minutes = (start_time_next - start_time_current).seconds // 60
+        programs[i]['duration'] = duration_minutes
+    programs.sort(key=lambda x: datetime.datetime.strptime(x['starts'], "%H%M"))
     return programs
-
 
 class TrawlerCYC(Trawler):
     @staticmethod
