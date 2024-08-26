@@ -14,12 +14,14 @@ def get_data(the_date):
     programs = []
     
     # Find the schedule for the specific day
-    for day_data in data["schedule"]:
-        if day_data.get(day_of_week):
-            Day = day_data[day_of_week]
-            break
-    else:
-        return programs
+    # print(data["schedule"].get(day_of_week), day_of_week)
+    Day = data["schedule"].get(day_of_week)
+    # for day_data in data["schedule"]:
+    #     if day_data.get(day_of_week):
+    #         Day = day_data[day_of_week]
+    #         break
+    #     else:
+    #         return programs
 
     # Extract program details
     for program in Day:

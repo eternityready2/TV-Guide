@@ -47,7 +47,8 @@ def get_data(the_date):
                     time_1 = '0' + time_1
                     
                 # Create a datetime object in Central Time
-                # print(time_1)
+                if (not time_1) or (not program_name) :
+                    continue
                 start = datetime.datetime.strptime("{} {} +0300".format(the_date.strftime("%Y-%m-%d"),  time_1), "%Y-%m-%d %H%M %z")
                 start = start.astimezone(central_tz)  # Convert to Central Time
                
@@ -74,6 +75,8 @@ def get_data(the_date):
                     time_2 = '0' + time_2
                     
                 # Create a datetime object in Central Time
+                if (not time_2) or (not program_name2) :
+                    continue
                 start2 = datetime.datetime.strptime("{} {} +0300".format((the_date + datetime.timedelta(days=1)).strftime("%Y-%m-%d"), time_2), "%Y-%m-%d %H%M %z")
                 start2 = start2.astimezone(central_tz)  # Convert to Central Time
                 

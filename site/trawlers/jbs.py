@@ -64,7 +64,7 @@ def get_data(the_date):
         return programs
 
     except requests.RequestException as e:
-        print("Request failed for date: %s\nwith error:%s" % (the_date, e))
+        # print("Request failed for date: %s\nwith error:%s" % (the_date, e))
         return None
 
 class TrawlerJewishB(Trawler):

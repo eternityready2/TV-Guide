@@ -26,7 +26,10 @@ def get_data(the_date):
         try:
             time_element = tr.find('td')
             time = time_element.text.strip().replace(' :', ':').replace('\n', '')
-            program_name = tr.find_all('td')[1].text.strip()
+            if len(tr.find_all('td')) > 0 :
+                program_name = tr.find_all('td')[1].text.strip()
+            else:
+                continue
             starts = datetime.datetime.strptime( "{} {} +0530".format(the_date.strftime("%m/%d/%Y"), time), "%m/%d/%Y %I:%M %p %z" )
         except Exception as e:
             print(f"Error parsing time or program name: {e}")
@@ -51,7 +54,10 @@ def get_data(the_date):
         try:
             time_element2 = tr2.find('td')
             time2 = time_element2.text.strip().replace(' :', ':').replace('\n', '')
-            program_name2 = tr2.find_all('td')[1].text.strip()
+            if len(tr2.find_all('td')) > 0:
+                program_name2 = tr2.find_all('td')[1].text.strip()
+            else:
+                continue
             starts2 = datetime.datetime.strptime(
                 "{} {} +0530".format(next_day.strftime("%m/%d/%Y"), time2),
                 "%m/%d/%Y %I:%M %p %z"

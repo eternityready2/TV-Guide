@@ -1,7 +1,6 @@
 {
-    "schedule": [
-      {
-        "sunday": [
+    "schedule": {
+        "Sunday": [
           {"program_name": "Variety", "starttime": "12:00 AM"},
           {"program_name": "Dove Bible Club", "starttime": "12:30 AM"},
           {"program_name": "End Time Ministries", "starttime": "1:00 AM"},
@@ -36,10 +35,8 @@
           {"program_name": "Oasis Ministries", "starttime": "4:30 PM"},
           {"program_name": "Ellison", "starttime": "5:00 PM"},
           {"program_name": "CBN News", "starttime": "5:30 PM"}
-        ]
-      },
-      {
-        "monday": [
+        ],
+        "Monday": [
           {"program_name": "Claud Bowers", "starttime": "12:00 AM"},
           {"program_name": "Dr Charles Stanley", "starttime": "12:30 AM"},
           {"program_name": "Jesse Duplantis", "starttime": "1:00 AM"},
@@ -72,10 +69,8 @@
           {"program_name": "Havas", "starttime": "4:30 PM"},
           {"program_name": "Quick Study with Rod Hembree", "starttime": "5:00 PM"},
           {"program_name": "Variety", "starttime": "5:30 PM"}
-        ]
-      },
-      {
-        "tuesday": [
+        ],
+        "Tuesday": [
           {"program_name": "Claud Bowers", "starttime": "12:00 AM"},
           {"program_name": "Rejoice in the Lord", "starttime": "12:30 AM"},
           {"program_name": "Our Jewish Roots", "starttime": "1:00 AM"},
@@ -108,10 +103,8 @@
           {"program_name": "Variety", "starttime": "4:30 PM"},
           {"program_name": "Quick Study with Rod Hembree", "starttime": "5:00 PM"},
           {"program_name": "Cannella", "starttime": "5:30 PM"}
-        ]
-      },
-      {
-        "wednesday": [
+        ],
+        "Wednesday": [
           {"program_name": "Claud Bowers", "starttime": "12:00 AM"},
           {"program_name": "Great Commissions", "starttime": "12:30 AM"},
           {"program_name": "Relevant Live", "starttime": "1:00 AM"},
@@ -144,10 +137,8 @@
           {"program_name": "Ellison", "starttime": "4:30 PM"},
           {"program_name": "Quick Study with Rod Hembree", "starttime": "5:00 PM"},
           {"program_name": "Cannella", "starttime": "5:30 PM"}
-        ]
-      },
-      {
-        "thursday": [
+        ],
+        "Thursday": [
           {"program_name": "Claud Bowers", "starttime": "12:00 AM"},
           {"program_name": "Michael Youssef", "starttime": "12:30 AM"},
           {"program_name": "Our Jewish Roots", "starttime": "1:00 AM"},
@@ -179,10 +170,8 @@
           {"program_name": "Ellison", "starttime": "4:30 PM"},
           {"program_name": "Quick Study with Rod Hembree", "starttime": "5:00 PM"},
           {"program_name": "Variety", "starttime": "5:30 PM"}
-        ]
-      },
-      {
-        "friday": [
+        ],
+        "Friday": [
           {"program_name": "Claud Bowers", "starttime": "12:00 AM"},
           {"program_name": "Benny Hinn", "starttime": "12:30 AM"},
           {"program_name": "Fred Price", "starttime": "1:00 AM"},
@@ -214,10 +203,8 @@
           {"program_name": "Dove Bible Club", "starttime": "4:30 PM"},
           {"program_name": "Quick Study with Rod Hembree", "starttime": "5:00 PM"},
           {"program_name": "Cannella", "starttime": "5:30 PM"}
-        ]
-      },
-      {
-        "saturday": [
+        ],
+        "Saturday": [
           {"program_name": "Claud Bowers", "starttime": "12:00 AM"},
           {"program_name": "Prophesy USA", "starttime": "12:30 AM"},
           {"program_name": "Fred Price", "starttime": "1:00 AM"},
@@ -253,5 +240,4 @@
           {"program_name": "Cannella", "starttime": "5:30 PM"}
         ]
       }
-    ]
   }

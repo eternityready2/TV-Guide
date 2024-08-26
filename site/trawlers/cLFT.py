@@ -13,20 +13,19 @@ def get_data(the_date):
     
     programs = []
     
-    
-    for day_data in data["data"]:
-        if day_data.get(day_of_week):
-            Day = day_data[day_of_week]
-            break
-    else:
-       
-        return programs
+    Day = data["data"].get(day_of_week)
+    # for day_data in data["data"]:
+    #     if day_data.get(day_of_week):
+    #         Day = day_data[day_of_week]
+    #         break
+    #     else:
+    #         return programs
 
     for program in Day:
         time_str = program["time"]
         program_name = program["program_name"]
         
-        central_time_str = datetime.datetime.strptime("{} -0400".format(time_str), "%I:%M%p %z")
+        central_time_str = datetime.datetime.strptime("{} {} -0400".format(the_date.strftime("%Y-%m-%d"), time_str), "%Y-%m-%d %I:%M%p %z")
         
         starts = central_time_str.astimezone(central_tz)
 
